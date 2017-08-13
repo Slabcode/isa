@@ -29,6 +29,7 @@ es:
         lastname: Apellido
         username: Nombre de usario
         mobile: Telefono
+        disabled: Deshabilitado
         role: Rol
       admin:
         confirmation_sent_at: Fecha de envío de confirmación

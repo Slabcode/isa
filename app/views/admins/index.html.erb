@@ -1,0 +1,21 @@
+<h1><%= t("admins.title")%> </h1>
+<%= link_to t("admins.log_out"), destroy_admin_session_path, method: :delete %>
+<%= link_to t("admins.new"), new_admin_path %>
+<%= link_to t("users.title"), users_path %>
+<%= link_to t("admins.edit"), edit_admin_registration_path(current_admin) %>
+
+
+<% @admins.each do |a| %>
+  <p>
+    <%= a.name %> - <%= a.lastname %> - <%= a.username %>
+  </p>
+  <p>
+    <%= link_to t("admins.show"), a %>
+    <% if current_admin.id != a.id %>
+      <%= link_to t("admins.destroy"), a, method: :delete, data: { confirm: 'Are you sure?'}  %>
+    <% end %>
+  </p>
+
+<% end %>
+
+<%= render 'paginate' %>
