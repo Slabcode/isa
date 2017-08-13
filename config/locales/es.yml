@@ -71,6 +71,8 @@ es:
     back: Atras
     sign_up: Crear usuario
     being_saved: "%{count} errores prohibieron de que el administrador sea guardado"
-
   users:
-    title: Usarios
+    title: Usuarios
+    show: Mostrar usuario
+    destroy: Borrar usuario
+    new: Nuevo usuario

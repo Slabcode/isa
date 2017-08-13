@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :authenticate_admin!, only: [:index,:destroy]
-  before_action :authenticate?, only: [:show]
+  before_action :authenticate, only: [:show]
   before_action :set_user, only: [:show,:destroy]
 
   def index
@@ -12,7 +12,7 @@ class UsersController < ApplicationController
 
   def destroy
     respond_to do |format|
-        @users.destroy
+        @user.destroy
         format.html {redirect_to users_path,notice: t("admins.destroyed")}
         format.json { head :no_content }
     end
