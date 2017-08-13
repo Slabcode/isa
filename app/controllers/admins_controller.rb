@@ -15,9 +15,10 @@ class AdminsController < ApplicationController
   end
 
   def create
-    @admin = Admin.new(admin_parms)
+    @admin = Admin.new(admin_params)
     respond_to do |format|
       if @admin.save
+        NotificationMailer.password_admin(@admin.email,params[:admin][:password]).deliver_later
         format.html { redirect_to @admin, notice:  t('admins.created') }
         format.json { render json: @admin, status: :create }
       else
@@ -44,7 +45,7 @@ class AdminsController < ApplicationController
 
   private
   def admin_params
-    params.require(:admin).permit(:name, :lastname, :emial, :password, :password_confirmation, :username,:mobile)
+    params.require(:admin).permit(:name, :lastname, :email, :password, :password_confirmation, :username,:mobile)
   end
 
   def set_admin

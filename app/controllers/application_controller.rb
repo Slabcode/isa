@@ -12,4 +12,19 @@ class ApplicationController < ActionController::Base
       devise_parameter_sanitizer.permit(:account_update, keys: [:name,:lastname,:mobile])
     end
   end
+
+  def authenticate?
+    if current_admin || current_user
+      true
+    end
+    redirect_to root_path
+  end
+
+  def after_sign_in_path_for(resource)
+    if current_admin
+      admins_path
+    else#We need to change this, for another specific route
+      requests_path
+    end
+  end
 end

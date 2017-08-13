@@ -1,0 +1,18 @@
+<h1><%= t("admins.title")%> </h1>
+<%= link_to t("admins.back"), admins_path %>
+<%= link_to t("users.new"), new_user_registration_path %>
+
+<% @users.each do |u| %>
+  <p>
+    <%= u.name %> - <%= u.lastname %> - <%= u.username %> - <%= u.role %>
+  </p>
+  <p>
+    <%= link_to t("users.show"), a %>
+    <% if current_admin %>
+      <%= link_to t("users.destroy"), a, method: :delete, data: { confirm: 'Are you sure?'}  %>
+    <% end %>
+  </p>
+
+<% end %>
+
+<%= render 'paginate' %>

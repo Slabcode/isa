@@ -59,6 +59,18 @@ es:
         one: 1 error prohibio que este %{model} fuera guardado
         other: "%{count} errores prohibieron que este %{model} fuera guardado"
   admins:
+    title: Adminstradores
     created: Hemos creado exitosamente el usario
     destroyed: Hemoas borrado el usario exitosamente
     destroyed_error: No se puede borrar el mismo adminstrador que el activo
+    log_out: Cerrar sesion
+    new: Nuevo adminstrador
+    show: Mostrar administrador
+    edit: Editar administrador
+    destroy: Borrar adminstrador
+    back: Atras
+    sign_up: Crear usuario
+    being_saved: "%{count} errores prohibieron de que el administrador sea guardado"
+
+  users:
+    title: Usarios
