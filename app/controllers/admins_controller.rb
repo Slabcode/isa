@@ -49,12 +49,51 @@ class AdminsController < ApplicationController
   end
 
   def requests
-    if params[:nivel_one] == "1" && params[:nivel_two] == "1" && params[:nivel_three] == "1"
-      # Tenemos que crear la logica aqui de como asignar avaluos a peritos
-      respond_to do |format|
+    nivel_one = {
+      "1"=>"Inmueble",
+      "2" =>"Mueble"
+    }
+    nivel_two = {
+      "1" => {
+        "1" => "Rural",
+        "2" => "Urbano"
+      }
+    }
+    nivel_three = {
+      "1" => {
+        "1" => "Casa rural",
+        "2" => "Lote"
+      },
+      "2" => {
+        "1" => "Apartamento",
+        "2" => "Bodega",
+        "3" => "Casa",
+        "4" => "Local",
+        "5" => "Lote urbano",
+        "6" => "Oficina"
+      }
+    }
+    n_1 = nivel_one[params[:nivel_one]]
+    n_2 = nivel_two[params[:nivel_one]][params[:nivel_two]]
+    n_3 = nivel_three[params[:nivel_two]][params[:nivel_three]]
+    respond_to do |format|
+        avaluo = Avaluo.new
+        avaluo.client_id = Client.find_by_id(params[:clientes]).id
+        avaluo.avaluo_type = Avaluo.avaluo_types["#{n_1}-#{n_2}-#{n_3}"]
+        avaluo.estado_avaluo = 0
+        avaluo.estado_revison = 0
+        avaluo.inmueble_tipo = n_3
+        avaluo.serial = SecureRandom.uuid
+        avaluo.save
+
+        user = User.find_by_id(params[:peritos])
+        a = AvaluoUser.new
+        a.user_id = user.id
+        a.avaluo_id = avaluo.id
+        a.save
+        NotificationMailer.notification_avaluo(user.email,avaluo.serial).deliver_later
         format.html { redirect_to admins_path, notice: 'Hemos asignado el avaluo al perito'}
         format.json { head :no_content}
-      end
     end
   end
 

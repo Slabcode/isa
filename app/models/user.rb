@@ -20,11 +20,9 @@ class User < ApplicationRecord
   validates_integrity_of :image
   validates_processing_of :image
 
-  has_many :in_ur_ap_users
-  has_many :in_ur_aps, through: :in_ur_ap_user
+  has_many :avaluo_users
+  has_many :users, through: :avaluo_users
 
-  has_many :in_ru_cr_users
-  has_many :in_ru_crs, through: :in_ru_cr_users
 
 
   def self.load_users(**args)

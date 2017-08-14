@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :avaluos
+  resources :avaluos, except: [:new,:index]
   root to: 'statics#index'
 
   devise_for :users, :controllers => {:registrations => "custom/registrations"}

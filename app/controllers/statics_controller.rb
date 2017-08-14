@@ -1,14 +1,24 @@
 class StaticsController < ApplicationController
-  before_action :authenticate_user!, only: [:requests]
+  before_action :authenticate, only: [:requests]
   def index
   end
 
   def requests
-    @in_ur_aps = InUrAp.where(
-      id: InUrApUser.where(user_id: current_user.id)
-    )
-    @in_ru_crs = InRuCr.where(
-      id: InRuCrUser.where(user_id: current_user.id)
-    )
+    if current_user
+      ids = AvaluoUser.where(
+        user_id: current_user.id
+      ).pluck(:avaluo_id)
+      @avaluos = Avaluo.where(
+        id: ids
+      )
+      if current_user.Perito?
+        @avaluos.where(estado_avaluo: [0,1])
+      else
+        @avaluos.where(estado_avaluo: [2])
+      end
+    else
+      @avaluos = Avaluo.where(estado_avaluo: 3)
+    end
+
   end
 end
