@@ -9,6 +9,7 @@ class User < ApplicationRecord
     "Perito" => 0,
     "Revisor Tecnico" => 1,
   }
+  mount_uploader :image, SignUploader
 
   validates_presence_of :email,:name,:lastname,:mobile,:username
   validates_length_of :name,:lastname, minimum: 4, maximum: 30
@@ -16,6 +17,14 @@ class User < ApplicationRecord
   validates_uniqueness_of :mobile,:username,:email
   validates_inclusion_of :role, :in => roles.keys
   validates_numericality_of :mobile,:only_integer => true
+  validates_integrity_of :image
+  validates_processing_of :image
+
+  has_many :in_ur_ap_users
+  has_many :in_ur_aps, through: :in_ur_ap_user
+
+  has_many :in_ru_cr_users
+  has_many :in_ru_crs, through: :in_ru_cr_users
 
 
   def self.load_users(**args)
@@ -26,5 +35,15 @@ class User < ApplicationRecord
         })
     end
     u
+  end
+
+  def self.full_name
+    "#{name} #{lastname}"
+  end
+
+  def self.peritos
+    all.where(users:{
+      role: 0
+      })
   end
 end

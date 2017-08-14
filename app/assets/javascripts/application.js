@@ -11,5 +11,64 @@
 // about supported directives.
 //
 //= require rails-ujs
-//= require turbolinks
+//= require jquery
+//= require jquery_ujs
 //= require_tree .
+
+$(document).ready(function(){
+    $("#nivel_one").change(function() {
+      var inmuebles_options = {"Seleccionar categoria nivel 2": "0",
+        "Rural": "1",
+        "Urbano": "2"
+      };
+      var value = $("#nivel_one").val();
+      var $el = $("#nivel_two");
+      $el.empty(); // remove old options
+      $.each(inmuebles_options, function(key,value) {
+        $el.append($("<option></option>")
+           .attr("value", value).text(key));
+      });
+
+    });
+    $("#nivel_two").change(function(){
+      var rural_options = {"Seleccionar categoria nivel 3": "0",
+        "Casa rural": "1",
+        "Lote": "2"
+      };
+      var urbano_options = {"Seleccionar categoria nivel 3": "0",
+        "Apartamento": "1",
+        "Bodega": "2",
+        "Casa": "3",
+        "Local": "4",
+        "Lote urbano": "5",
+        "Oficina": "6"
+      };
+      var value = $("#nivel_two").val();
+      var $el = $("#nivel_three");
+      $el.empty(); // remove old options
+      if(value === "1"){
+        $.each(rural_options, function(key,value) {
+          $el.append($("<option></option>")
+             .attr("value", value).text(key));
+        });
+      }else{
+        $.each(urbano_options, function(key,value) {
+          $el.append($("<option></option>")
+             .attr("value", value).text(key));
+        });
+      }
+
+    });
+    $("#avaluo").submit(function(e){
+        if($("#nivel_one").val() === "0"){
+          alert("Debes selecionar al menos uno de nivel uno");
+          e.preventDefault();
+        }else if($("#nivel_two").val() === "0"){
+          alert("Debes selecionar al menos uno de nivel dos");
+          e.preventDefault();
+        }else if($("#nivel_three").val() === "0"){
+          alert("Debes selecionar al menos uno de nivel dos");
+          e.preventDefault();
+        }
+    });
+});

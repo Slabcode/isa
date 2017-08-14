@@ -1,0 +1,441 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre_del_solicitante: MyString
+  tipo_de_identificacion: 1
+  numero_de_identificacion: MyString
+  client: one
+  objeto_avaluo: 1
+  fecha_avaluo: 2017-08-13
+  fecha_correcion: 2017-08-13
+  metodologia_valuatoria: 1
+  barrio: MyString
+  nombre_conjuton_o_edifico: MyString
+  sector: MyString
+  departamento: MyString
+  ciudad: MyString
+  codigo_ciudad: MyString
+  sistema_de_coordenadas: 1
+  latitud: 
+  longitud: 
+  otro_sistema_de_coordenadas: MyString
+  direccion_inmueble: MyString
+  justificacion_metodologia: MyText
+  barrio_estrato: 1
+  barrio_legalidad_del_barrio: 1
+  barrio_topografia: 1
+  barrio_transporte: 1
+  barrio_acueducto_sector: false
+  barrio_acueductio_predio: false
+  barrio_alcantarillado_sector: false
+  barrio_alacantarillado_predio: false
+  barrio_energia_electrica_sector: false
+  barrio_energia_electrica_predio: false
+  barrio_gas_natural_sector: 
+  barrio_gas_natural_predio: false
+  barrio_telefonia_sector: false
+  barrio_telefonia_predio: false
+  barrio_vivienda: false
+  barrio_industria: false
+  barrio_comercio: false
+  barrio_otro: false
+  barrio_otro_name: MyString
+  barrio_estado: 1
+  barrio_pavimentada: 1
+  barrio_andenes: 1
+  barrio_sardineles: 1
+  barrio_parques: false
+  barrio_paradero: false
+  barrio_alumbrado: false
+  barrio_zonas_verders: false
+  barrio_arborizacion: false
+  barrio_alamedas: false
+  barrio_ciclo_rutas: false
+  barrio_perspectivas_de_valorizacion: MyText
+  inmueble_tipo: 
+  inmueble_uso: 1
+  inmueble_otro: MyString
+  inmueble_clase: 1
+  inmueble_otro: MyString
+  inmueble_tipo_vivienda: 1
+  m_inmob_principal_1: MyString
+  m_inmob_principal_2: MyString
+  m_inmob_gj_1: MyString
+  m_inmob_gj_2: MyString
+  m_inmob_gj_3: MyString
+  m_inmob_gj_4: MyString
+  m_inmob_gj_5: MyString
+  m_inmob_dp_1: MyString
+  m_inmob_dp_2: MyString
+  chip: MyString
+  inmueble_ubicacion: 1
+  inmueble_num_escritura: MyString
+  inmueble_num_notaria: MyString
+  inmueble_fecha_escritura: 2017-08-13
+  inmueble_depto: MyString
+  inmueble_ciudad: MyString
+  construccion_numero_de_pisos: MyString
+  construccion_numero_de_sotanos: 1
+  construccion_numero_año_construccion: 1
+  construccion_vetustez: 1
+  construccion_estado: false
+  construccion_terminada: false
+  construccion_en_obra: false
+  construccion_avance: 
+  construccion_usada_sin_terminar: false
+  construccion_usada_terminado: false
+  construccion_usada: 
+  construccion_estado_de_conservacion: 1
+  construccon_estructura_one: 1
+  construccion_estructura_two: 1
+  construccion_estructura_otra: MyString
+  construccion_fachada: 1
+  construccion_fachada_otra: MyString
+  construccion_cubierta: 1
+  construcion_cubierta_otra: MyString
+  construccion_iregularidad_de_la_planta: 
+  construccion_iregularidad_altura: 1
+  construccion_daños_previos: 1
+  construccion_reparados: 1
+  construccion_reforzada: 1
+  construccion_sala: 1
+  construccion_comedor: 1
+  construccion_estudio: 1
+  construccion_baño_social: 1
+  construccion_estar_hab: 1
+  construccion_habitaciones: 1
+  construccion_baño_privado: 1
+  construccion_cocina: 1
+  construccion_cuarto_serv: 1
+  construccion_baño_servicio: 1
+  construccion_patio_interior: 1
+  construccion_terraza: 1
+  construccion_jardin: 1
+  construccion_balcon: 1
+  construccion_z_verde_privada: 1
+  construccion_iluminacioin: 1
+  construccion_ventilacion: 1
+  construccion_total_garages: 1
+  construccion_cubierto: 1
+  construccion_descubierto: 1
+  construccion_uso_exclusivo: 1
+  construccion_privado: 1
+  construccion_bahia_comunal: 1
+  construccion_sencillo: 1
+  construccion_double: 1
+  construccion_servidumbre: 1
+  construccion_deposito: 1
+  construccion_local: 1
+  construccion_bodega: 1
+  construccion_oficina: 1
+  construccion_estado_pisos: 1
+  construccion_estado_techos: 1
+  construccion_estado_muros: 1
+  construccion_estado_c_mader: 1
+  construccion_estado_c_metal: 1
+  construccion_estado_baños: 1
+  construccion_estado_cocina: 1
+  construccion_calidad_pisos: 1
+  construccion_calidad_techos: 1
+  construccion_calidad_muros: 1
+  construccion_calidd_c_mader: 1
+  construccion_calidad_c_metal: 1
+  construccion_calidad_baños: 1
+  construccion_cocina: 1
+  construccion_sometido_a_propiedad_horizontal: 1
+  construccion_conjunto_o_agrupacion_cerrada: 1
+  construccion_ubicacion_inmueble: 1
+  construccion_numero_edificios_o_casas: 1
+  construccion_unid_por_piso: 1
+  construccion_total_unidades: 1
+  construccion_porteria: 
+  construccion_citofion: false
+  construccion_bicicletero: false
+  construccion_piscina: false
+  construccion_tanque_agua: false
+  construccion_club_house: false
+  construccion_gj_visitante: false
+  construccion_juegos_niños: false
+  construccion_cancha_multi: false
+  construccion_bomba_eyectora: false
+  construccion_a_acon_central: false
+  construccion_cacha_squash: false
+  construccion_z_verdes: false
+  construccion_gimnasio: false
+  construccion_golfito: false
+  construccion_salon_comunal: false
+  construccion_shut_basuras: false
+  construccion_eq_presion_cons: false
+  construccion_planta_electrica: false
+  construccion_ascensor: false
+  construccion_numero_ascensores: 1
+  construccion_otro_1: MyString
+  construccion_otro_two: MyString
+  oferta_actualidad_edificadora: MyString
+  oferta_comportamiento_de_oferta_y_demanda: MyText
+  oferta_tiempo_esperado_comercializacion: 1
+  ambiental_condiciones: 1
+  ambiental_positivo: 
+  ambiental_positivo_parques: false
+  ambiental_z_verdes: false
+  ambiental_otro: MyString
+  ambiental_negativo_por_aire: false
+  ambiental_negativo_basura: false
+  ambiental_negativo_inseguridad: false
+  ambiental_negativo_ruido: false
+  ambiental_negativo_aguas_servidad: false
+  ambiental_negativo_otro: MyString
+  liquidacion_1: 1
+  liquidacion_area_1: 
+  liquidacion_valor_1: 
+  liquidacion_2: 1
+  liquidacion_area_2: 
+  liquidacion_valor_2: 
+  liquidacion_3: 1
+  liquidacion_area_3: 
+  liquidacion_valor_3: 
+  liquidacion_4: 1
+  liquidacion_area_4: 
+  liquidacion_valor_4: 
+  liquidacion_5: 1
+  liquidacion_area_5: 
+  liquidacion_valor_5: 
+  liquidacion_6: 1
+  liquidacion_area_6: 
+  liquidacion_valor_6: 
+  liquidacion_7: 1
+  liquidacion_area_7: 
+  liquidacion_valor_7: 
+  liquidacion_8: 1
+  liquidacion_area_8: 
+  liquidacion_valor_8: 1
+  liquidacion_9: 1
+  liquidacion_area_9: 
+  liquidacion_valor_9: 
+  liquidacion_10: 1
+  liquidacion_area_10: 
+  liquidacion_valor_10: 1
+  liquidacion_calificacion_garantia: false
+  liquidacion_valor_asegurable: 
+  observaciones_observaciones: MyText
+  user: one
+
+two:
+  nombre_del_solicitante: MyString
+  tipo_de_identificacion: 1
+  numero_de_identificacion: MyString
+  client: two
+  objeto_avaluo: 1
+  fecha_avaluo: 2017-08-13
+  fecha_correcion: 2017-08-13
+  metodologia_valuatoria: 1
+  barrio: MyString
+  nombre_conjuton_o_edifico: MyString
+  sector: MyString
+  departamento: MyString
+  ciudad: MyString
+  codigo_ciudad: MyString
+  sistema_de_coordenadas: 1
+  latitud: 
+  longitud: 
+  otro_sistema_de_coordenadas: MyString
+  direccion_inmueble: MyString
+  justificacion_metodologia: MyText
+  barrio_estrato: 1
+  barrio_legalidad_del_barrio: 1
+  barrio_topografia: 1
+  barrio_transporte: 1
+  barrio_acueducto_sector: false
+  barrio_acueductio_predio: false
+  barrio_alcantarillado_sector: false
+  barrio_alacantarillado_predio: false
+  barrio_energia_electrica_sector: false
+  barrio_energia_electrica_predio: false
+  barrio_gas_natural_sector: 
+  barrio_gas_natural_predio: false
+  barrio_telefonia_sector: false
+  barrio_telefonia_predio: false
+  barrio_vivienda: false
+  barrio_industria: false
+  barrio_comercio: false
+  barrio_otro: false
+  barrio_otro_name: MyString
+  barrio_estado: 1
+  barrio_pavimentada: 1
+  barrio_andenes: 1
+  barrio_sardineles: 1
+  barrio_parques: false
+  barrio_paradero: false
+  barrio_alumbrado: false
+  barrio_zonas_verders: false
+  barrio_arborizacion: false
+  barrio_alamedas: false
+  barrio_ciclo_rutas: false
+  barrio_perspectivas_de_valorizacion: MyText
+  inmueble_tipo: 
+  inmueble_uso: 1
+  inmueble_otro: MyString
+  inmueble_clase: 1
+  inmueble_otro: MyString
+  inmueble_tipo_vivienda: 1
+  m_inmob_principal_1: MyString
+  m_inmob_principal_2: MyString
+  m_inmob_gj_1: MyString
+  m_inmob_gj_2: MyString
+  m_inmob_gj_3: MyString
+  m_inmob_gj_4: MyString
+  m_inmob_gj_5: MyString
+  m_inmob_dp_1: MyString
+  m_inmob_dp_2: MyString
+  chip: MyString
+  inmueble_ubicacion: 1
+  inmueble_num_escritura: MyString
+  inmueble_num_notaria: MyString
+  inmueble_fecha_escritura: 2017-08-13
+  inmueble_depto: MyString
+  inmueble_ciudad: MyString
+  construccion_numero_de_pisos: MyString
+  construccion_numero_de_sotanos: 1
+  construccion_numero_año_construccion: 1
+  construccion_vetustez: 1
+  construccion_estado: false
+  construccion_terminada: false
+  construccion_en_obra: false
+  construccion_avance: 
+  construccion_usada_sin_terminar: false
+  construccion_usada_terminado: false
+  construccion_usada: 
+  construccion_estado_de_conservacion: 1
+  construccon_estructura_one: 1
+  construccion_estructura_two: 1
+  construccion_estructura_otra: MyString
+  construccion_fachada: 1
+  construccion_fachada_otra: MyString
+  construccion_cubierta: 1
+  construcion_cubierta_otra: MyString
+  construccion_iregularidad_de_la_planta: 
+  construccion_iregularidad_altura: 1
+  construccion_daños_previos: 1
+  construccion_reparados: 1
+  construccion_reforzada: 1
+  construccion_sala: 1
+  construccion_comedor: 1
+  construccion_estudio: 1
+  construccion_baño_social: 1
+  construccion_estar_hab: 1
+  construccion_habitaciones: 1
+  construccion_baño_privado: 1
+  construccion_cocina: 1
+  construccion_cuarto_serv: 1
+  construccion_baño_servicio: 1
+  construccion_patio_interior: 1
+  construccion_terraza: 1
+  construccion_jardin: 1
+  construccion_balcon: 1
+  construccion_z_verde_privada: 1
+  construccion_iluminacioin: 1
+  construccion_ventilacion: 1
+  construccion_total_garages: 1
+  construccion_cubierto: 1
+  construccion_descubierto: 1
+  construccion_uso_exclusivo: 1
+  construccion_privado: 1
+  construccion_bahia_comunal: 1
+  construccion_sencillo: 1
+  construccion_double: 1
+  construccion_servidumbre: 1
+  construccion_deposito: 1
+  construccion_local: 1
+  construccion_bodega: 1
+  construccion_oficina: 1
+  construccion_estado_pisos: 1
+  construccion_estado_techos: 1
+  construccion_estado_muros: 1
+  construccion_estado_c_mader: 1
+  construccion_estado_c_metal: 1
+  construccion_estado_baños: 1
+  construccion_estado_cocina: 1
+  construccion_calidad_pisos: 1
+  construccion_calidad_techos: 1
+  construccion_calidad_muros: 1
+  construccion_calidd_c_mader: 1
+  construccion_calidad_c_metal: 1
+  construccion_calidad_baños: 1
+  construccion_cocina: 1
+  construccion_sometido_a_propiedad_horizontal: 1
+  construccion_conjunto_o_agrupacion_cerrada: 1
+  construccion_ubicacion_inmueble: 1
+  construccion_numero_edificios_o_casas: 1
+  construccion_unid_por_piso: 1
+  construccion_total_unidades: 1
+  construccion_porteria: 
+  construccion_citofion: false
+  construccion_bicicletero: false
+  construccion_piscina: false
+  construccion_tanque_agua: false
+  construccion_club_house: false
+  construccion_gj_visitante: false
+  construccion_juegos_niños: false
+  construccion_cancha_multi: false
+  construccion_bomba_eyectora: false
+  construccion_a_acon_central: false
+  construccion_cacha_squash: false
+  construccion_z_verdes: false
+  construccion_gimnasio: false
+  construccion_golfito: false
+  construccion_salon_comunal: false
+  construccion_shut_basuras: false
+  construccion_eq_presion_cons: false
+  construccion_planta_electrica: false
+  construccion_ascensor: false
+  construccion_numero_ascensores: 1
+  construccion_otro_1: MyString
+  construccion_otro_two: MyString
+  oferta_actualidad_edificadora: MyString
+  oferta_comportamiento_de_oferta_y_demanda: MyText
+  oferta_tiempo_esperado_comercializacion: 1
+  ambiental_condiciones: 1
+  ambiental_positivo: 
+  ambiental_positivo_parques: false
+  ambiental_z_verdes: false
+  ambiental_otro: MyString
+  ambiental_negativo_por_aire: false
+  ambiental_negativo_basura: false
+  ambiental_negativo_inseguridad: false
+  ambiental_negativo_ruido: false
+  ambiental_negativo_aguas_servidad: false
+  ambiental_negativo_otro: MyString
+  liquidacion_1: 1
+  liquidacion_area_1: 
+  liquidacion_valor_1: 
+  liquidacion_2: 1
+  liquidacion_area_2: 
+  liquidacion_valor_2: 
+  liquidacion_3: 1
+  liquidacion_area_3: 
+  liquidacion_valor_3: 
+  liquidacion_4: 1
+  liquidacion_area_4: 
+  liquidacion_valor_4: 
+  liquidacion_5: 1
+  liquidacion_area_5: 
+  liquidacion_valor_5: 
+  liquidacion_6: 1
+  liquidacion_area_6: 
+  liquidacion_valor_6: 
+  liquidacion_7: 1
+  liquidacion_area_7: 
+  liquidacion_valor_7: 
+  liquidacion_8: 1
+  liquidacion_area_8: 
+  liquidacion_valor_8: 1
+  liquidacion_9: 1
+  liquidacion_area_9: 
+  liquidacion_valor_9: 
+  liquidacion_10: 1
+  liquidacion_area_10: 
+  liquidacion_valor_10: 1
+  liquidacion_calificacion_garantia: false
+  liquidacion_valor_asegurable: 
+  observaciones_observaciones: MyText
+  user: two

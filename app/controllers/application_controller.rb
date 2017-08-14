@@ -5,8 +5,8 @@ class ApplicationController < ActionController::Base
   protected
   def configure_permitted_parameters
     if resource_class == User
-      devise_parameter_sanitizer.permit(:sign_up, keys: [:username,:name,:lastname,:mobile,:disabled,:rol,:username])
-      devise_parameter_sanitizer.permit(:account_update, keys: [:name,:lastname,:mobile,:role,:disabled])
+      devise_parameter_sanitizer.permit(:sign_up, keys: [:username,:name,:lastname,:mobile,:disabled,:rol,:username,:image])
+      devise_parameter_sanitizer.permit(:account_update, keys: [:name,:lastname,:mobile,:role,:disabled,:image])
     elsif resource_class == Admin
       devise_parameter_sanitizer.permit(:sign_up, keys: [:username,:name,:lastname,:mobile,:username])
       devise_parameter_sanitizer.permit(:account_update, keys: [:name,:lastname,:mobile])

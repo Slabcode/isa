@@ -4,5 +4,11 @@ class StaticsController < ApplicationController
   end
 
   def requests
+    @in_ur_aps = InUrAp.where(
+      id: InUrApUser.where(user_id: current_user.id)
+    )
+    @in_ru_crs = InRuCr.where(
+      id: InRuCrUser.where(user_id: current_user.id)
+    )
   end
 end

@@ -1,6 +1,6 @@
 class AdminsController < ApplicationController
   before_action :set_admin, only: [:show,:destoy]
-  before_action :authenticate_admin!, only: [:destroy,:create,:new,:index,:show]
+  before_action :authenticate_admin!, only: [:destroy,:create,:new,:index,:show,:create_requests,:requests]
 
   def index
     @admins = Admin.load_admins(page: params[:page],per_page: params[:per_page])
@@ -41,6 +41,28 @@ class AdminsController < ApplicationController
 
     end
 
+  end
+
+  def create_requests
+    @peritos =  User.peritos
+    @clientes = Client.all
+  end
+
+  def requests
+    if params[:nivel_one] == "1" && params[:nivel_two] == "1" && params[:nivel_three] == "1"
+      a = InRuCr.new
+      a.client_id = params[:clientes]
+      a.save
+      u = User.find_by_id(params[:peritos])
+      r = InRuCrUser.new
+      r.user_id = u.id
+      r.in_ru_cr_id = a.id
+      r.save
+      respond_to do |format|
+        format.html { redirect_to admins_path, notice: 'Hemos asignado el avaluo al perito'}
+        format.json { head :no_content}
+      end
+    end
   end
 
   private

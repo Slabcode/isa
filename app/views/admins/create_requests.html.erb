@@ -1,0 +1,18 @@
+<h1>
+  Asignarle avaluo a un perito
+</h1>
+<%= form_with(url: requests_admins_path, local: true, id: 'avaluo') do |form| %>
+  <%= select_tag(:nivel_one, options_for_select([['Seleccionar categoria nivel 1', 0], ['Inmuebles', 1], ['Muebles', 3]])) %>
+  <br>
+  <%= select_tag(:nivel_two, options_for_select([['Seleccionar categoria nivel 2', 0]])) %>
+  <br>
+  <%= select_tag(:nivel_three, options_for_select([['Seleccionar categoria nivel 3', 0]])) %>
+  <br>
+
+  <%= select_tag "peritos", options_from_collection_for_select(@peritos, "id", "email") %>
+  <%= select_tag "clientes", options_from_collection_for_select(@clientes, "id", "name") %>
+
+  <br>
+  <button type="submit">Enviar</button>
+
+<% end %>

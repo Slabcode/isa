@@ -1,0 +1,1112 @@
+<%= form_with(model: in_ru_cr, local: true) do |form| %>
+  <% if in_ru_cr.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(in_ru_cr.errors.count, "error") %> prohibited this in_ru_cr from being saved:</h2>
+
+      <ul>
+      <% in_ru_cr.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nombre_del_solicitante %>
+    <%= form.text_field :nombre_del_solicitante, id: :in_ur_ap_nombre_del_solicitante %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tipo_de_identificacion %>
+    <%= form.number_field :tipo_de_identificacion, id: :in_ur_ap_tipo_de_identificacion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :numero_de_identificacion %>
+    <%= form.text_field :numero_de_identificacion, id: :in_ur_ap_numero_de_identificacion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :client_id %>
+    <%= form.text_field :client_id, id: :in_ur_ap_client_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :objeto_avaluo %>
+    <%= form.number_field :objeto_avaluo, id: :in_ur_ap_objeto_avaluo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fecha_avaluo %>
+    <%= form.date_select :fecha_avaluo, id: :in_ur_ap_fecha_avaluo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fecha_correccion %>
+    <%= form.date_select :fecha_correccion, id: :in_ur_ap_fecha_correccion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :metodologia_valuatoria %>
+    <%= form.number_field :metodologia_valuatoria, id: :in_ur_ap_metodologia_valuatoria %>
+  </div>
+
+  <div class="field">
+    <%= form.label :esatdo_avaluo %>
+    <%= form.number_field :esatdo_avaluo, id: :in_ur_ap_esatdo_avaluo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :estado_revision %>
+    <%= form.number_field :estado_revision, id: :in_ur_ap_estado_revision %>
+  </div>
+
+  <div class="field">
+    <%= form.label :barrio %>
+    <%= form.text_field :barrio, id: :in_ur_ap_barrio %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nombre_conjunto_o_edificio %>
+    <%= form.text_field :nombre_conjunto_o_edificio, id: :in_ur_ap_nombre_conjunto_o_edificio %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sector %>
+    <%= form.text_field :sector, id: :in_ur_ap_sector %>
+  </div>
+
+  <div class="field">
+    <%= form.label :departamento %>
+    <%= form.text_field :departamento, id: :in_ur_ap_departamento %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ciudad %>
+    <%= form.text_field :ciudad, id: :in_ur_ap_ciudad %>
+  </div>
+
+  <div class="field">
+    <%= form.label :codigo_ciudad %>
+    <%= form.text_field :codigo_ciudad, id: :in_ur_ap_codigo_ciudad %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sistemas_de_coordenadas %>
+    <%= form.number_field :sistemas_de_coordenadas, id: :in_ur_ap_sistemas_de_coordenadas %>
+  </div>
+
+  <div class="field">
+    <%= form.label :latitud %>
+    <%= form.text_field :latitud, id: :in_ur_ap_latitud %>
+  </div>
+
+  <div class="field">
+    <%= form.label :longitud %>
+    <%= form.text_field :longitud, id: :in_ur_ap_longitud %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sistemas_de_coordenadas_otra %>
+    <%= form.text_field :sistemas_de_coordenadas_otra, id: :in_ur_ap_sistemas_de_coordenadas_otra %>
+  </div>
+
+  <div class="field">
+    <%= form.label :direccion_inmueble %>
+    <%= form.text_field :direccion_inmueble, id: :in_ur_ap_direccion_inmueble %>
+  </div>
+
+  <div class="field">
+    <%= form.label :justificacion_metodologica %>
+    <%= form.text_area :justificacion_metodologica, id: :in_ur_ap_justificacion_metodologica %>
+  </div>
+
+  <div class="field">
+    <%= form.label :barrio_estrato %>
+    <%= form.number_field :barrio_estrato, id: :in_ur_ap_barrio_estrato %>
+  </div>
+
+  <div class="field">
+    <%= form.label :barrio_legalidad %>
+    <%= form.number_field :barrio_legalidad, id: :in_ur_ap_barrio_legalidad %>
+  </div>
+
+  <div class="field">
+    <%= form.label :barrio_topografia %>
+    <%= form.number_field :barrio_topografia, id: :in_ur_ap_barrio_topografia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :barrio_transporte %>
+    <%= form.number_field :barrio_transporte, id: :in_ur_ap_barrio_transporte %>
+  </div>
+
+  <div class="field">
+    <%= form.label :barrio_acueducto_sector %>
+    <%= form.check_box :barrio_acueducto_sector, id: :in_ur_ap_barrio_acueducto_sector %>
+  </div>
+
+  <div class="field">
+    <%= form.label :barrio_acueducto_predio %>
+    <%= form.check_box :barrio_acueducto_predio, id: :in_ur_ap_barrio_acueducto_predio %>
+  </div>
+
+  <div class="field">
+    <%= form.label :barrio_alcantarillado_sector %>
+    <%= form.check_box :barrio_alcantarillado_sector, id: :in_ur_ap_barrio_alcantarillado_sector %>
+  </div>
+
+  <div class="field">
+    <%= form.label :barrio_alcantarillado_predio %>
+    <%= form.check_box :barrio_alcantarillado_predio, id: :in_ur_ap_barrio_alcantarillado_predio %>
+  </div>
+
+  <div class="field">
+    <%= form.label :barrio_energia_electrica_sector %>
+    <%= form.check_box :barrio_energia_electrica_sector, id: :in_ur_ap_barrio_energia_electrica_sector %>
+  </div>
+
+  <div class="field">
+    <%= form.label :barrio_energia_electrica_predio %>
+    <%= form.check_box :barrio_energia_electrica_predio, id: :in_ur_ap_barrio_energia_electrica_predio %>
+  </div>
+
+  <div class="field">
+    <%= form.label :barrio_gas_natural_sector %>
+    <%= form.check_box :barrio_gas_natural_sector, id: :in_ur_ap_barrio_gas_natural_sector %>
+  </div>
+
+  <div class="field">
+    <%= form.label :barrio_gas_natural_predio %>
+    <%= form.check_box :barrio_gas_natural_predio, id: :in_ur_ap_barrio_gas_natural_predio %>
+  </div>
+
+  <div class="field">
+    <%= form.label :barrio_telefonia_sector %>
+    <%= form.check_box :barrio_telefonia_sector, id: :in_ur_ap_barrio_telefonia_sector %>
+  </div>
+
+  <div class="field">
+    <%= form.label :barrio_telefonia_predio %>
+    <%= form.check_box :barrio_telefonia_predio, id: :in_ur_ap_barrio_telefonia_predio %>
+  </div>
+
+  <div class="field">
+    <%= form.label :barrio_vivienda %>
+    <%= form.check_box :barrio_vivienda, id: :in_ur_ap_barrio_vivienda %>
+  </div>
+
+  <div class="field">
+    <%= form.label :barrio_industria %>
+    <%= form.check_box :barrio_industria, id: :in_ur_ap_barrio_industria %>
+  </div>
+
+  <div class="field">
+    <%= form.label :barrio_comercio %>
+    <%= form.check_box :barrio_comercio, id: :in_ur_ap_barrio_comercio %>
+  </div>
+
+  <div class="field">
+    <%= form.label :barrio_otro %>
+    <%= form.check_box :barrio_otro, id: :in_ur_ap_barrio_otro %>
+  </div>
+
+  <div class="field">
+    <%= form.label :barrio_otro_nombre %>
+    <%= form.text_field :barrio_otro_nombre, id: :in_ur_ap_barrio_otro_nombre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :barrio_estado %>
+    <%= form.number_field :barrio_estado, id: :in_ur_ap_barrio_estado %>
+  </div>
+
+  <div class="field">
+    <%= form.label :barrio_pavimentada %>
+    <%= form.number_field :barrio_pavimentada, id: :in_ur_ap_barrio_pavimentada %>
+  </div>
+
+  <div class="field">
+    <%= form.label :barrio_andenes %>
+    <%= form.number_field :barrio_andenes, id: :in_ur_ap_barrio_andenes %>
+  </div>
+
+  <div class="field">
+    <%= form.label :barrio_sardineles %>
+    <%= form.number_field :barrio_sardineles, id: :in_ur_ap_barrio_sardineles %>
+  </div>
+
+  <div class="field">
+    <%= form.label :barrio_parques %>
+    <%= form.check_box :barrio_parques, id: :in_ur_ap_barrio_parques %>
+  </div>
+
+  <div class="field">
+    <%= form.label :barrio_parqueadero %>
+    <%= form.check_box :barrio_parqueadero, id: :in_ur_ap_barrio_parqueadero %>
+  </div>
+
+  <div class="field">
+    <%= form.label :barrio_alumbrado %>
+    <%= form.check_box :barrio_alumbrado, id: :in_ur_ap_barrio_alumbrado %>
+  </div>
+
+  <div class="field">
+    <%= form.label :barrio_zonas_verdes %>
+    <%= form.check_box :barrio_zonas_verdes, id: :in_ur_ap_barrio_zonas_verdes %>
+  </div>
+
+  <div class="field">
+    <%= form.label :barrio_arborizacion %>
+    <%= form.check_box :barrio_arborizacion, id: :in_ur_ap_barrio_arborizacion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :barrio_alamedas %>
+    <%= form.check_box :barrio_alamedas, id: :in_ur_ap_barrio_alamedas %>
+  </div>
+
+  <div class="field">
+    <%= form.label :barrio_ciclo_rutas %>
+    <%= form.check_box :barrio_ciclo_rutas, id: :in_ur_ap_barrio_ciclo_rutas %>
+  </div>
+
+  <div class="field">
+    <%= form.label :barrio_perspectivas_de_valorizacion %>
+    <%= form.text_area :barrio_perspectivas_de_valorizacion, id: :in_ur_ap_barrio_perspectivas_de_valorizacion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :inmueble_tipo %>
+    <%= form.number_field :inmueble_tipo, id: :in_ur_ap_inmueble_tipo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :inmueble_uso %>
+    <%= form.number_field :inmueble_uso, id: :in_ur_ap_inmueble_uso %>
+  </div>
+
+  <div class="field">
+    <%= form.label :inmueble_tipo_otro %>
+    <%= form.text_field :inmueble_tipo_otro, id: :in_ur_ap_inmueble_tipo_otro %>
+  </div>
+
+  <div class="field">
+    <%= form.label :inmueble_clase %>
+    <%= form.number_field :inmueble_clase, id: :in_ur_ap_inmueble_clase %>
+  </div>
+
+  <div class="field">
+    <%= form.label :inmueble_clase_otro %>
+    <%= form.text_field :inmueble_clase_otro, id: :in_ur_ap_inmueble_clase_otro %>
+  </div>
+
+  <div class="field">
+    <%= form.label :inmueble_tipo_vivienda %>
+    <%= form.number_field :inmueble_tipo_vivienda, id: :in_ur_ap_inmueble_tipo_vivienda %>
+  </div>
+
+  <div class="field">
+    <%= form.label :m_inmob_principal_1 %>
+    <%= form.text_field :m_inmob_principal_1, id: :in_ur_ap_m_inmob_principal_1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :m_inmob_principal_2 %>
+    <%= form.text_field :m_inmob_principal_2, id: :in_ur_ap_m_inmob_principal_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :m_inmob_gj_1 %>
+    <%= form.text_field :m_inmob_gj_1, id: :in_ur_ap_m_inmob_gj_1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :m_inmob_gj_2 %>
+    <%= form.text_field :m_inmob_gj_2, id: :in_ur_ap_m_inmob_gj_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :m_inmob_gj_3 %>
+    <%= form.text_field :m_inmob_gj_3, id: :in_ur_ap_m_inmob_gj_3 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :m_inmob_gj_4 %>
+    <%= form.text_field :m_inmob_gj_4, id: :in_ur_ap_m_inmob_gj_4 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :m_inmob_gj_5 %>
+    <%= form.text_field :m_inmob_gj_5, id: :in_ur_ap_m_inmob_gj_5 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :m_inmob_dp_1 %>
+    <%= form.text_field :m_inmob_dp_1, id: :in_ur_ap_m_inmob_dp_1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :m_inmobiliaria_dp_2 %>
+    <%= form.text_field :m_inmobiliaria_dp_2, id: :in_ur_ap_m_inmobiliaria_dp_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :chip %>
+    <%= form.text_field :chip, id: :in_ur_ap_chip %>
+  </div>
+
+  <div class="field">
+    <%= form.label :inmueble_ubicacion %>
+    <%= form.number_field :inmueble_ubicacion, id: :in_ur_ap_inmueble_ubicacion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :inmueble_num_escritura %>
+    <%= form.text_field :inmueble_num_escritura, id: :in_ur_ap_inmueble_num_escritura %>
+  </div>
+
+  <div class="field">
+    <%= form.label :inmueble_num_notaria %>
+    <%= form.text_field :inmueble_num_notaria, id: :in_ur_ap_inmueble_num_notaria %>
+  </div>
+
+  <div class="field">
+    <%= form.label :inmueble_fecha_escritura %>
+    <%= form.date_select :inmueble_fecha_escritura, id: :in_ur_ap_inmueble_fecha_escritura %>
+  </div>
+
+  <div class="field">
+    <%= form.label :inumueble_depto %>
+    <%= form.text_field :inumueble_depto, id: :in_ur_ap_inumueble_depto %>
+  </div>
+
+  <div class="field">
+    <%= form.label :inmueble_ciudad %>
+    <%= form.text_field :inmueble_ciudad, id: :in_ur_ap_inmueble_ciudad %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_numero_de_pisos %>
+    <%= form.number_field :construccion_numero_de_pisos, id: :in_ur_ap_construccion_numero_de_pisos %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_numero_de_sotanos %>
+    <%= form.number_field :construccion_numero_de_sotanos, id: :in_ur_ap_construccion_numero_de_sotanos %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_año_construccion %>
+    <%= form.number_field :construccion_año_construccion, id: :in_ur_ap_construccion_año_construccion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_vetustez %>
+    <%= form.number_field :construccion_vetustez, id: :in_ur_ap_construccion_vetustez %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_estado %>
+    <%= form.check_box :construccion_estado, id: :in_ur_ap_construccion_estado %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_terminada %>
+    <%= form.check_box :construccion_terminada, id: :in_ur_ap_construccion_terminada %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_en_obra %>
+    <%= form.check_box :construccion_en_obra, id: :in_ur_ap_construccion_en_obra %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_avance %>
+    <%= form.text_field :construccion_avance, id: :in_ur_ap_construccion_avance %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_usada_sin_terminar %>
+    <%= form.check_box :construccion_usada_sin_terminar, id: :in_ur_ap_construccion_usada_sin_terminar %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_usada_terminada %>
+    <%= form.check_box :construccion_usada_terminada, id: :in_ur_ap_construccion_usada_terminada %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_usada_remodelado %>
+    <%= form.check_box :construccion_usada_remodelado, id: :in_ur_ap_construccion_usada_remodelado %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_estado_de_conservacion %>
+    <%= form.number_field :construccion_estado_de_conservacion, id: :in_ur_ap_construccion_estado_de_conservacion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_estructura_1 %>
+    <%= form.number_field :construccion_estructura_1, id: :in_ur_ap_construccion_estructura_1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_estructura_2 %>
+    <%= form.number_field :construccion_estructura_2, id: :in_ur_ap_construccion_estructura_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_estructura_otro %>
+    <%= form.text_field :construccion_estructura_otro, id: :in_ur_ap_construccion_estructura_otro %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_fachada %>
+    <%= form.number_field :construccion_fachada, id: :in_ur_ap_construccion_fachada %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_fallada_otra %>
+    <%= form.text_field :construccion_fallada_otra, id: :in_ur_ap_construccion_fallada_otra %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_cubierta %>
+    <%= form.number_field :construccion_cubierta, id: :in_ur_ap_construccion_cubierta %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_cubierta_otra %>
+    <%= form.text_field :construccion_cubierta_otra, id: :in_ur_ap_construccion_cubierta_otra %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_irregularidad_de_la_planta %>
+    <%= form.number_field :construccion_irregularidad_de_la_planta, id: :in_ur_ap_construccion_irregularidad_de_la_planta %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_irregularidad_altura %>
+    <%= form.number_field :construccion_irregularidad_altura, id: :in_ur_ap_construccion_irregularidad_altura %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_daños_previos %>
+    <%= form.number_field :construccion_daños_previos, id: :in_ur_ap_construccion_daños_previos %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_reparados %>
+    <%= form.number_field :construccion_reparados, id: :in_ur_ap_construccion_reparados %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_estructura_reforzada %>
+    <%= form.number_field :construccion_estructura_reforzada, id: :in_ur_ap_construccion_estructura_reforzada %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_sala %>
+    <%= form.number_field :construccion_sala, id: :in_ur_ap_construccion_sala %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_comedor %>
+    <%= form.number_field :construccion_comedor, id: :in_ur_ap_construccion_comedor %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_estudio %>
+    <%= form.number_field :construccion_estudio, id: :in_ur_ap_construccion_estudio %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_baño_social %>
+    <%= form.number_field :construccion_baño_social, id: :in_ur_ap_construccion_baño_social %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_estar_hab %>
+    <%= form.number_field :construccion_estar_hab, id: :in_ur_ap_construccion_estar_hab %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_habitaciones %>
+    <%= form.number_field :construccion_habitaciones, id: :in_ur_ap_construccion_habitaciones %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_baño_privado %>
+    <%= form.number_field :construccion_baño_privado, id: :in_ur_ap_construccion_baño_privado %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_cocina %>
+    <%= form.number_field :construccion_cocina, id: :in_ur_ap_construccion_cocina %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_cuarto_serv %>
+    <%= form.number_field :construccion_cuarto_serv, id: :in_ur_ap_construccion_cuarto_serv %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_baño_servicio %>
+    <%= form.number_field :construccion_baño_servicio, id: :in_ur_ap_construccion_baño_servicio %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_patio_interior %>
+    <%= form.number_field :construccion_patio_interior, id: :in_ur_ap_construccion_patio_interior %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_terraza %>
+    <%= form.number_field :construccion_terraza, id: :in_ur_ap_construccion_terraza %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_jardin %>
+    <%= form.number_field :construccion_jardin, id: :in_ur_ap_construccion_jardin %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_balcon %>
+    <%= form.number_field :construccion_balcon, id: :in_ur_ap_construccion_balcon %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_z_verder_privada %>
+    <%= form.number_field :construccion_z_verder_privada, id: :in_ur_ap_construccion_z_verder_privada %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_iluminacion %>
+    <%= form.number_field :construccion_iluminacion, id: :in_ur_ap_construccion_iluminacion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_ventilacion %>
+    <%= form.number_field :construccion_ventilacion, id: :in_ur_ap_construccion_ventilacion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_total_garajes %>
+    <%= form.number_field :construccion_total_garajes, id: :in_ur_ap_construccion_total_garajes %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_cubierto %>
+    <%= form.number_field :construccion_cubierto, id: :in_ur_ap_construccion_cubierto %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_descubierto %>
+    <%= form.number_field :construccion_descubierto, id: :in_ur_ap_construccion_descubierto %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_uso_exclusivo %>
+    <%= form.number_field :construccion_uso_exclusivo, id: :in_ur_ap_construccion_uso_exclusivo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_privado %>
+    <%= form.number_field :construccion_privado, id: :in_ur_ap_construccion_privado %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_bahia_comunal %>
+    <%= form.number_field :construccion_bahia_comunal, id: :in_ur_ap_construccion_bahia_comunal %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_sencillo %>
+    <%= form.number_field :construccion_sencillo, id: :in_ur_ap_construccion_sencillo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_double %>
+    <%= form.number_field :construccion_double, id: :in_ur_ap_construccion_double %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_servidumbre %>
+    <%= form.number_field :construccion_servidumbre, id: :in_ur_ap_construccion_servidumbre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_deposito %>
+    <%= form.number_field :construccion_deposito, id: :in_ur_ap_construccion_deposito %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_local %>
+    <%= form.number_field :construccion_local, id: :in_ur_ap_construccion_local %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_bodega %>
+    <%= form.number_field :construccion_bodega, id: :in_ur_ap_construccion_bodega %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_oficina %>
+    <%= form.number_field :construccion_oficina, id: :in_ur_ap_construccion_oficina %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_estado_pisos %>
+    <%= form.number_field :construccion_estado_pisos, id: :in_ur_ap_construccion_estado_pisos %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_estado_techos %>
+    <%= form.number_field :construccion_estado_techos, id: :in_ur_ap_construccion_estado_techos %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_estado_muros %>
+    <%= form.number_field :construccion_estado_muros, id: :in_ur_ap_construccion_estado_muros %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_estado_c_mader %>
+    <%= form.number_field :construccion_estado_c_mader, id: :in_ur_ap_construccion_estado_c_mader %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_estado_c_metal %>
+    <%= form.number_field :construccion_estado_c_metal, id: :in_ur_ap_construccion_estado_c_metal %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_estado_baños %>
+    <%= form.number_field :construccion_estado_baños, id: :in_ur_ap_construccion_estado_baños %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_estado_cocina %>
+    <%= form.number_field :construccion_estado_cocina, id: :in_ur_ap_construccion_estado_cocina %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_calidad_pisos %>
+    <%= form.number_field :construccion_calidad_pisos, id: :in_ur_ap_construccion_calidad_pisos %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_calidad_techos %>
+    <%= form.number_field :construccion_calidad_techos, id: :in_ur_ap_construccion_calidad_techos %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_calidad_muros %>
+    <%= form.number_field :construccion_calidad_muros, id: :in_ur_ap_construccion_calidad_muros %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_calidad_c_mader %>
+    <%= form.number_field :construccion_calidad_c_mader, id: :in_ur_ap_construccion_calidad_c_mader %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_calidad_c_metal %>
+    <%= form.number_field :construccion_calidad_c_metal, id: :in_ur_ap_construccion_calidad_c_metal %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_calidad_baños %>
+    <%= form.number_field :construccion_calidad_baños, id: :in_ur_ap_construccion_calidad_baños %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_calidad_cocina %>
+    <%= form.number_field :construccion_calidad_cocina, id: :in_ur_ap_construccion_calidad_cocina %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_sometido_a_propiedad_intelectual %>
+    <%= form.number_field :construccion_sometido_a_propiedad_intelectual, id: :in_ur_ap_construccion_sometido_a_propiedad_intelectual %>
+  </div>
+
+  <div class="field">
+    <%= form.label :conjunto_o_agrupacion_cerrada %>
+    <%= form.number_field :conjunto_o_agrupacion_cerrada, id: :in_ur_ap_conjunto_o_agrupacion_cerrada %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_ubicacion_inmueble %>
+    <%= form.number_field :construccion_ubicacion_inmueble, id: :in_ur_ap_construccion_ubicacion_inmueble %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_numero_edificios_o_casas %>
+    <%= form.number_field :construccion_numero_edificios_o_casas, id: :in_ur_ap_construccion_numero_edificios_o_casas %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_unid_por_piso %>
+    <%= form.number_field :construccion_unid_por_piso, id: :in_ur_ap_construccion_unid_por_piso %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_total_unidades %>
+    <%= form.number_field :construccion_total_unidades, id: :in_ur_ap_construccion_total_unidades %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_porteria %>
+    <%= form.check_box :construccion_porteria, id: :in_ur_ap_construccion_porteria %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_citofono %>
+    <%= form.check_box :construccion_citofono, id: :in_ur_ap_construccion_citofono %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_bicicletero %>
+    <%= form.check_box :construccion_bicicletero, id: :in_ur_ap_construccion_bicicletero %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_pisciona %>
+    <%= form.check_box :construccion_pisciona, id: :in_ur_ap_construccion_pisciona %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_tanque_agua %>
+    <%= form.check_box :construccion_tanque_agua, id: :in_ur_ap_construccion_tanque_agua %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_club_house %>
+    <%= form.check_box :construccion_club_house, id: :in_ur_ap_construccion_club_house %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_gj_visitante %>
+    <%= form.check_box :construccion_gj_visitante, id: :in_ur_ap_construccion_gj_visitante %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_juegos_niños %>
+    <%= form.check_box :construccion_juegos_niños, id: :in_ur_ap_construccion_juegos_niños %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_cancha_mult %>
+    <%= form.check_box :construccion_cancha_mult, id: :in_ur_ap_construccion_cancha_mult %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_bomba_eyectora %>
+    <%= form.check_box :construccion_bomba_eyectora, id: :in_ur_ap_construccion_bomba_eyectora %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_cancha_squash %>
+    <%= form.check_box :construccion_cancha_squash, id: :in_ur_ap_construccion_cancha_squash %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_z_verdes %>
+    <%= form.check_box :construccion_z_verdes, id: :in_ur_ap_construccion_z_verdes %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_gimnasio %>
+    <%= form.check_box :construccion_gimnasio, id: :in_ur_ap_construccion_gimnasio %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_golfito %>
+    <%= form.check_box :construccion_golfito, id: :in_ur_ap_construccion_golfito %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_salon_comunal %>
+    <%= form.check_box :construccion_salon_comunal, id: :in_ur_ap_construccion_salon_comunal %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_shut_basuras %>
+    <%= form.check_box :construccion_shut_basuras, id: :in_ur_ap_construccion_shut_basuras %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_eq_presion_cons %>
+    <%= form.check_box :construccion_eq_presion_cons, id: :in_ur_ap_construccion_eq_presion_cons %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_planta_electrica %>
+    <%= form.check_box :construccion_planta_electrica, id: :in_ur_ap_construccion_planta_electrica %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_ascensor %>
+    <%= form.check_box :construccion_ascensor, id: :in_ur_ap_construccion_ascensor %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_numero_ascensores %>
+    <%= form.number_field :construccion_numero_ascensores, id: :in_ur_ap_construccion_numero_ascensores %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_otros_1 %>
+    <%= form.text_field :construccion_otros_1, id: :in_ur_ap_construccion_otros_1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion_otros_2 %>
+    <%= form.text_field :construccion_otros_2, id: :in_ur_ap_construccion_otros_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :oferta_actualidad_edificadora %>
+    <%= form.text_area :oferta_actualidad_edificadora, id: :in_ur_ap_oferta_actualidad_edificadora %>
+  </div>
+
+  <div class="field">
+    <%= form.label :oferta_comportamiento_de_oferta_y_demanda %>
+    <%= form.text_field :oferta_comportamiento_de_oferta_y_demanda, id: :in_ur_ap_oferta_comportamiento_de_oferta_y_demanda %>
+  </div>
+
+  <div class="field">
+    <%= form.label :oferta_tiempo_esperado_comercializacion %>
+    <%= form.number_field :oferta_tiempo_esperado_comercializacion, id: :in_ur_ap_oferta_tiempo_esperado_comercializacion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ambiental_salubridad %>
+    <%= form.number_field :ambiental_salubridad, id: :in_ur_ap_ambiental_salubridad %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ambiental_arborizacion %>
+    <%= form.check_box :ambiental_arborizacion, id: :in_ur_ap_ambiental_arborizacion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ambiental_parques %>
+    <%= form.check_box :ambiental_parques, id: :in_ur_ap_ambiental_parques %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ambiental_z_verdes %>
+    <%= form.check_box :ambiental_z_verdes, id: :in_ur_ap_ambiental_z_verdes %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ambiental_positivo_otro %>
+    <%= form.text_area :ambiental_positivo_otro, id: :in_ur_ap_ambiental_positivo_otro %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ambiental_negativo_por_aire %>
+    <%= form.check_box :ambiental_negativo_por_aire, id: :in_ur_ap_ambiental_negativo_por_aire %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ambiental_negativo_basura %>
+    <%= form.check_box :ambiental_negativo_basura, id: :in_ur_ap_ambiental_negativo_basura %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ambiental_negativo_inseguridad %>
+    <%= form.check_box :ambiental_negativo_inseguridad, id: :in_ur_ap_ambiental_negativo_inseguridad %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ambiental_negativo_ruido %>
+    <%= form.check_box :ambiental_negativo_ruido, id: :in_ur_ap_ambiental_negativo_ruido %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ambiental_negativo_aguas_servidas %>
+    <%= form.check_box :ambiental_negativo_aguas_servidas, id: :in_ur_ap_ambiental_negativo_aguas_servidas %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ambiental_negativo_otro %>
+    <%= form.text_area :ambiental_negativo_otro, id: :in_ur_ap_ambiental_negativo_otro %>
+  </div>
+
+  <div class="field">
+    <%= form.label :liquidacion_1 %>
+    <%= form.number_field :liquidacion_1, id: :in_ru_cr_liquidacion_1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :liquidacion_area_1 %>
+    <%= form.text_field :liquidacion_area_1, id: :in_ru_cr_liquidacion_area_1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :liquidacion_valor_1 %>
+    <%= form.text_field :liquidacion_valor_1, id: :in_ru_cr_liquidacion_valor_1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :liquidacion_2 %>
+    <%= form.number_field :liquidacion_2, id: :in_ru_cr_liquidacion_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :liquidacion_area_2 %>
+    <%= form.text_field :liquidacion_area_2, id: :in_ru_cr_liquidacion_area_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :liquidacion_valor_2 %>
+    <%= form.text_field :liquidacion_valor_2, id: :in_ru_cr_liquidacion_valor_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :liquidacion_3 %>
+    <%= form.number_field :liquidacion_3, id: :in_ru_cr_liquidacion_3 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :liquidacion_area_3 %>
+    <%= form.text_field :liquidacion_area_3, id: :in_ru_cr_liquidacion_area_3 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :liquidacion_valor_3 %>
+    <%= form.text_field :liquidacion_valor_3, id: :in_ru_cr_liquidacion_valor_3 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :liquidacion_4 %>
+    <%= form.number_field :liquidacion_4, id: :in_ru_cr_liquidacion_4 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :liquidacion_area_4 %>
+    <%= form.text_field :liquidacion_area_4, id: :in_ru_cr_liquidacion_area_4 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :liquidacion_valor_4 %>
+    <%= form.text_field :liquidacion_valor_4, id: :in_ru_cr_liquidacion_valor_4 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :liquidacion_5 %>
+    <%= form.number_field :liquidacion_5, id: :in_ru_cr_liquidacion_5 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :liquidacion_area_5 %>
+    <%= form.text_field :liquidacion_area_5, id: :in_ru_cr_liquidacion_area_5 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :liquidacion_valor_5 %>
+    <%= form.text_field :liquidacion_valor_5, id: :in_ru_cr_liquidacion_valor_5 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :liquidacion_6 %>
+    <%= form.number_field :liquidacion_6, id: :in_ru_cr_liquidacion_6 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :liquidacion_area_6 %>
+    <%= form.text_field :liquidacion_area_6, id: :in_ru_cr_liquidacion_area_6 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :liquidacion_valor_6 %>
+    <%= form.text_field :liquidacion_valor_6, id: :in_ru_cr_liquidacion_valor_6 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :liquidacion_7 %>
+    <%= form.number_field :liquidacion_7, id: :in_ru_cr_liquidacion_7 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :liquidacion_area_7 %>
+    <%= form.text_field :liquidacion_area_7, id: :in_ru_cr_liquidacion_area_7 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :liquidacion_valor_7 %>
+    <%= form.text_field :liquidacion_valor_7, id: :in_ru_cr_liquidacion_valor_7 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :liquidacion_8 %>
+    <%= form.number_field :liquidacion_8, id: :in_ru_cr_liquidacion_8 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :liquidacion_area_8 %>
+    <%= form.text_field :liquidacion_area_8, id: :in_ru_cr_liquidacion_area_8 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :liquidacion_valor_8 %>
+    <%= form.number_field :liquidacion_valor_8, id: :in_ru_cr_liquidacion_valor_8 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :liquidacion_9 %>
+    <%= form.number_field :liquidacion_9, id: :in_ru_cr_liquidacion_9 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :liquidacion_area_9 %>
+    <%= form.text_field :liquidacion_area_9, id: :in_ru_cr_liquidacion_area_9 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :liquidacion_valor_9 %>
+    <%= form.text_field :liquidacion_valor_9, id: :in_ru_cr_liquidacion_valor_9 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :liquidacion_10 %>
+    <%= form.number_field :liquidacion_10, id: :in_ru_cr_liquidacion_10 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :liquidacion_area_10 %>
+    <%= form.text_field :liquidacion_area_10, id: :in_ru_cr_liquidacion_area_10 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :liquidacion_valor_10 %>
+    <%= form.number_field :liquidacion_valor_10, id: :in_ru_cr_liquidacion_valor_10 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :liquidacion_calificacion_garantia %>
+    <%= form.check_box :liquidacion_calificacion_garantia, id: :in_ru_cr_liquidacion_calificacion_garantia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :liquidacion_valor_asegurable %>
+    <%= form.text_field :liquidacion_valor_asegurable, id: :in_ru_cr_liquidacion_valor_asegurable %>
+  </div>
+
+  <div class="field">
+    <%= form.label :observaciones_observaciones %>
+    <%= form.text_area :observaciones_observaciones, id: :in_ru_cr_observaciones_observaciones %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id, id: :in_ru_cr_user_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

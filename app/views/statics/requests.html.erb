@@ -1,6 +1,14 @@
 <h1>Aqui se van a mostrar las peticiones del usario, igulamente puede ser consultadas por el usuario</h1>
-<% if current_admin %>
-  <%= link_to t("admins.log_out"), destroy_admin_session_path %>
-<% else %>
-  <%= link_to t("admins.log_out"), destroy_user_session_path %>
+
+<h1>current_user.role</h1>
+<%= link_to t("admins.log_out"), destroy_user_session_path , method: :delete %>
+
+<h2>Avaluos Inmuebles-rural-casa rual</h2>
+<% @in_ru_crs.each do |a| %>
+  <%= link_to a.id, edit_in_ru_cr_path(a) %>
+<% end %>
+
+<h2>Avaluos Inmuebles-urbano-apartamentos</h2>
+<% @in_ur_aps.each do |a| %>
+  <%= link_to a.id, edit_in_ur_ap_path(a) %>
 <% end %>

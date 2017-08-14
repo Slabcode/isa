@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  in_ur_ap: one
+  user: 
+
+two:
+  in_ur_ap: two
+  user: 
