@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  resources :in_ur_aps
-  resources :in_ru_crs
   root to: 'statics#index'
 
   devise_for :users, :controllers => {:registrations => "custom/registrations"}
