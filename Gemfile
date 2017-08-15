@@ -8,6 +8,8 @@ end
 gem 'font-awesome-sass'
 gem 'bootstrap-sass', '~> 3.3.6'
 
+gem 'font-awesome-sass'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.3'
 # Use postgresql as the database for Active Record

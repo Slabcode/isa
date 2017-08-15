@@ -1,3 +1,9 @@
-<h1><%= t("admins.new") %></h1>
+<%= stylesheet_link_tag 'admins', media: 'all', type:"text/css" %>
+<section class="new_form">
+	<div class="logo">
+		<%= image_tag "logo_isa.png", :class => "logo img-responsive" %>
+	</div>
+	<h1 class="title"><%= t("admins.new") %></h1>
 
-<%= render 'form', admin: @admin %>
+	<%= render 'form', admin: @admin %>
+</section>

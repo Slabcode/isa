@@ -1,18 +1,27 @@
-<h1><%= t("admins.title")%> </h1>
-<%= link_to t("admins.back"), admins_path %>
-<%= link_to t("users.new"), new_user_registration_path %>
+<%= stylesheet_link_tag 'users', media: 'all', type:"text/css" %>
 
-<% @users.each do |u| %>
-  <p>
-    <%= u.name %> - <%= u.lastname %> - <%= u.username %> - <%= u.role %>
-  </p>
-  <p>
-    <%= link_to t("users.show"), u %>
-    <% if current_admin %>
-      <%= link_to t("users.destroy"), u, method: :delete, data: { confirm: 'Are you sure?'}  %>
-    <% end %>
-  </p>
+<section class="home_users">
+	<div class="logo">
+		<%= image_tag "logo_isa.png", :class => "logo img-responsive" %>
+	</div>
+	<h2 class="title"><%= t("users.title")%> </h2>
+	<%= link_to t("users.new"), new_user_registration_path %>
+	
+	<section class="show_users">
+		<% @users.each do |u| %>
+		<p>
+			<%= u.name %> - <%= u.lastname %> - <%= u.username %> - <%= u.role %>
+		</p>
+		<p>
+			<%= link_to t("users.show"), u %>
+			<% if current_admin %>
+			<%= link_to t("users.destroy"), u, method: :delete, data: { confirm: 'Are you sure?'}  %>
+			<% end %>
+		</p>
 
-<% end %>
+		<% end %>	
+	</section>
 
-<%= render 'paginate' %>
+	<%= render 'paginate' %>	
+</section>
+

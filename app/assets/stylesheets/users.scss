@@ -13,16 +13,14 @@ body{
 	position: relative;
 	text-align: center;
 	.login, .registration{
-		left: 0;
-		margin: 0 auto;
-		position: absolute;
-		right: 0;
-		top: 10%;
+		display: inline-block;
+		padding: 100px 0;
+		position: relative;
 		width: 20%;
 		.logo{
 			display: inline-block;
 			position: relative;
-			width: 250px;
+			width: 140px;
 		}
 		.title{
 			color: #333;
@@ -40,7 +38,7 @@ body{
 					font-family: $font-Lato;
 					font-size: 15px;
 					padding: 3px 10px;
-					width: 90%;
+					width: 100%;
 				}
 			}
 			.remember{
@@ -126,6 +124,27 @@ body{
 					}
 				}
 			}
+			.normal{
+				.field{
+					input{
+						padding: 3px 10px;
+					}
+				}
+			}
 		}
+	}
+}
+
+.home_users{
+	padding: 80px 0;
+	text-align: center;
+	.logo{
+		display: inline-block;
+		position: relative;
+		width: 140px;
+	}
+	.title{
+		color: #333;
+		font-family: $font-LatoB;
 	}
 }
