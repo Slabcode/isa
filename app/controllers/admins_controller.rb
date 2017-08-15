@@ -1,6 +1,6 @@
 class AdminsController < ApplicationController
   before_action :set_admin, only: [:show,:destoy]
-  before_action :authenticate_admin!, only: [:destroy,:create,:new,:index,:show,:create_requests,:requests]
+  before_action :authenticate_admin!, only: [:destroy,:create,:new,:index,:show,:create_requests,:requests,:create_pdf]
 
   def index
     @admins = Admin.load_admins(page: params[:page],per_page: params[:per_page])
@@ -46,6 +46,9 @@ class AdminsController < ApplicationController
   def create_requests
     @peritos =  User.peritos
     @clientes = Client.all
+  end
+
+  def create_pdf
   end
 
   def requests

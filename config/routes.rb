@@ -15,6 +15,7 @@ Rails.application.routes.draw do
     collection do
       get 'create-requests', to: "admins#create_requests"
       post 'requests', to: "admins#requests"
+      get 'create-pdf', to: "admins#create_pdf"
     end
   end
 

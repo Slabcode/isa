@@ -16,6 +16,7 @@
   <%= a.inmueble_tipo %>
   <%= link_to a.serial, edit_avaluo_path(a) %>
   <%if current_admin %>
+    <%= link_to a.serial, create_pdf_admins_path(format: "pdf") %>
     <%= a.fecha_avaluo %>
   <% end %>
   <br>
