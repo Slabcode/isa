@@ -53,7 +53,7 @@ class AvaluosController < ApplicationController
         if current_user.Perito?
           if params.has_key?(:finalizado)
             @avaluo.estado_avaluo = 2
-            revisor = User.where(role: 1)
+            revisor = User.where(role: 1).first
             a = AvaluoUser.new
             a.avaluo_id = @avaluo.id
             a.user_id = revisor.id
