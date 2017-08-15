@@ -49,6 +49,13 @@ class AdminsController < ApplicationController
   end
 
   def create_pdf
+    @avaluo = Avaluo.find_by_id(params[:avaluo])
+    respond_to do |format|
+      format.pdf do
+          pdf = ReportPdf.new(@avaluo)
+          send_data pdf.render, filename: 'avaluos.pdf', type: 'application/pdf'
+        end
+    end
   end
 
   def requests
