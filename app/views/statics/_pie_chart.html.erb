@@ -1,0 +1,11 @@
+<%= pie_chart @results, id: "chart", adapter: "highcharts",
+library: {
+  tooltip: {
+    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>' },
+    title: { text: "#{@title}" },
+    plotOptions: { pie: { allowPointSelect: true,
+      cursor: 'pointer', dataLabels: { enabled: false },
+      showInLegend: true }
+    }
+  }
+%>

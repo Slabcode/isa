@@ -22,6 +22,8 @@ Rails.application.routes.draw do
   resources :users, only: [:index,:show,:destroy]
   controller :statics do
     get 'requests', to: "statics#requests"
+    get 'reports', to: "statics#reports"
+    post 'statistics', to: "statics#statistics"
   end
   resources :clients
 end

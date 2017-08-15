@@ -13,7 +13,7 @@ class Avaluo < ApplicationRecord
 
   enum estado_revison: {
     "sin revison" => 0,
-    "en revision" => 1,
+    "revisando" => 1,
     "revisado" => 2,
   }
 
@@ -25,7 +25,9 @@ class Avaluo < ApplicationRecord
     "Inmueble-Urbano-Casa" => 4,
     "Inmueble-Urbano-Local" => 5,
     "Inmueble-Urbano-Lote urbano" => 6,
-    "Inmueble-Urbano-Lote Oficina" => 6,
+    "Inmueble-Urbano-Lote Oficina" => 7,
   }
+
+  
 
 end
