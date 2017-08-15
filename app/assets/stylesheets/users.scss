@@ -1,3 +1,131 @@
-// Place all the styles related to the users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/*Importamos Fuentes, Mixins y Variables*/
+@import "fonts";
+@import "mixin";
+@import "variables";
+
+body{
+	color: #333;
+	margin: 0;
+	padding: 10px;
+}
+
+.main{
+	position: relative;
+	text-align: center;
+	.login, .registration{
+		left: 0;
+		margin: 0 auto;
+		position: absolute;
+		right: 0;
+		top: 10%;
+		width: 20%;
+		.logo{
+			display: inline-block;
+			position: relative;
+			width: 250px;
+		}
+		.title{
+			color: #333;
+			font-family: $font-LatoB;
+		}
+		.new_user{
+			margin-bottom: 20px;
+			.field{
+				display: block;
+				margin: 15px 0 0;
+				position: relative;
+				text-align: center;
+				input{
+					display: inline-block;
+					font-family: $font-Lato;
+					font-size: 15px;
+					padding: 3px 10px;
+					width: 90%;
+				}
+			}
+			.remember{
+				display: inline-block;
+				margin: 20px 0 0;
+				text-align: left;
+				width: 48%;
+				input{
+					width: auto;
+				}
+				label{
+					font-family: $font-Lato;
+					font-size: 14px;
+				}
+			}
+			.actions{
+				display: inline-block;
+				margin: 15px 0 0;
+				text-align: right;
+				width: 50%;
+				input{
+					cursor: pointer;
+					display: inline-block;
+					font-family: $font-Lato;
+					font-size: 14px;
+					padding: 5px 10px;
+					width: 90%;
+				}
+			}
+		}
+		a{
+			font-family: $font-Lato;
+			font-size: 14px;
+		}
+	}
+	.registration{
+		display: inline-block;
+		left: unset;
+		padding: 40px 0;
+		position: relative;
+		right: unset;
+		top: unset;
+		width: 50%;
+		.new_user{
+			.form-group{
+				margin: 0 0 15px;
+				.field{
+					padding: 0 7.5px;
+					input{
+						display: block;
+						position: relative;
+						width: 100%;
+					}
+				}
+				.image{
+					label{
+						float: left;
+						text-align: left;
+						width: 15%;
+					}
+					input{
+						display: inline-block;
+						float: left;
+						width: 85%;
+					}
+				}
+			}
+			.field{
+				padding: 0 7.5px;
+				input{
+					width: 100%;
+				}
+			}
+			.bottom{
+				margin-bottom: 5px;
+				.field{
+					label{
+						margin: 0;
+						padding: 10px 2px 0;
+					}
+					input{
+						padding: 10px 10px 0;
+					}
+				}
+			}
+		}
+	}
+}
