@@ -11,13 +11,13 @@
   <%= a.avaluo_type %>
   <%= a.estado_avaluo %>
 
-  <% if !current_user.Perito? %>
+  <% if current_user && !current_user.Perito? %>
     <%= a.estado_revison %>
   <% end %>
   <%= a.inmueble_tipo %>
   <%= link_to a.serial, edit_avaluo_path(a) %>
   <%if current_admin %>
-    <%= link_to a.serial, create_pdf_admins_path(format: "pdf") %>
+    <%= link_to "generar pdf", create_pdf_admins_path(format: "pdf",avaluo: a.id) %>
     <%= a.fecha_avaluo %>
   <% end %>
   <br>

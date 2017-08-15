@@ -69,3 +69,10 @@ gem 'will_paginate-bootstrap'
 
 #images
 gem 'carrierwave', '~> 1.0'
+
+#charts
+gem "chartkick"
+
+#pdf
+gem 'prawn'
+gem 'prawn-table'
