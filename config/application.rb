@@ -15,6 +15,13 @@ module Isa
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
 
+    config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
+    config.assets.paths << Rails.root.join('app', 'assets', 'stylesheets')
+    config.assets.paths << Rails.root.join('app', 'assets', 'javascripts')
+    config.assets.paths << Rails.root.join('app', 'assets', 'images')
+    config.assets.paths << Rails.root.join("vendor", "assets", "javascripts")
+    config.assets.paths << Rails.root.join("vendor", "assets", "stylesheets")
+    
     I18n.available_locales = [:es]
 
     # Set default locale to something other than :en

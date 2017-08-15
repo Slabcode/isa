@@ -1,26 +1,54 @@
-<%= notice %>
+<%= stylesheet_link_tag 'admins', media: 'all', type:"text/css" %>
 
-<h1><%= t("admins.title")%> </h1>
-<%= link_to t("admins.log_out"), destroy_admin_session_path, method: :delete %>
-<%= link_to t("admins.new"), new_admin_path %>
-<%= link_to t("users.title"), users_path %>
-<%= link_to t("admins.edit"), edit_admin_registration_path(current_admin) %>
-<%= link_to t("clients.new"), new_client_path %>
+<section class="home_admin">
+	<!--<h1><%= t("admins.title")%> </h1>-->
+	<div class="logo">
+		<%= image_tag "logo_isa.png", :class => "logo img-responsive" %>
+	</div>
+	<%= link_to t("admins.log_out"), destroy_admin_session_path, method: :delete, :class=>"logout"  %>
+	
+	<div class="admin_users">
+		<% @admins.each do |a| %>
+		<h3 class="current_user">
+			<%= a.name %> <%= a.lastname %> - <%= a.username %>
+		</h3>
+		<p>
+			<% if current_admin.id != a.id %>
+			<%= link_to t("admins.destroy"), a, method: :delete, data: { confirm: 'Are you sure?'}  %>
+			<% end %>
+		</p>
+	</div>
 
-<%= link_to "Crear nuevo avaluo", create_requests_admins_path %>
+	<div class="admin_actions clearfix">
+		<div class="action">
+			<%= link_to new_admin_path, :class=>"item" do %>
+			<%= icon('user-plus') + " " + t("admins.new") %>
+			<% end %>
+		</div>
+		<div class="action">
+			<%= link_to users_path, :class=>"item" do %>
+			<%= icon('users') + " " + t("users.title") %>
+			<% end %>	
+		</div>
+		<div class="action">
+			<%= link_to edit_admin_registration_path(current_admin), :class=>"item" do %>
+			<%= icon('pencil-square-o') + " " + t("admins.edit") %>
+			<% end %>
+		</div>
+		<div class="action">
+			<%= link_to new_client_path, :class=>"item" do %>
+			<%= icon('plus') + " " + t("clients.new") %>
+			<% end %>
+		</div>
+		<div class="action">
+			<%= link_to create_requests_admins_path, :class=>"item" do %>
+			<%= icon('plus-circle') %> Crear nuevo avaluo
+			<% end %>
+		</div>
+	</div>
 
+	<% end %>
 
-<% @admins.each do |a| %>
-  <p>
-    <%= a.name %> - <%= a.lastname %> - <%= a.username %>
-  </p>
-  <p>
-    <%= link_to t("admins.show"), a %>
-    <% if current_admin.id != a.id %>
-      <%= link_to t("admins.destroy"), a, method: :delete, data: { confirm: 'Are you sure?'}  %>
-    <% end %>
-  </p>
+	<%= render 'paginate' %>
 
-<% end %>
-
-<%= render 'paginate' %>
+</section>
