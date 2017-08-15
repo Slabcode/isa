@@ -12,9 +12,9 @@ class StaticsController < ApplicationController
         id: ids
       )
       if current_user.Perito?
-        @avaluos.where(estado_avaluo: [0,1])
+        @avaluos = @avaluos.where(estado_avaluo: [0,1])
       else
-        @avaluos.where(estado_avaluo: [2])
+        @avaluos = @avaluos.where(estado_avaluo: [2])
       end
     else
       @avaluos = Avaluo.where(estado_avaluo: 3)
