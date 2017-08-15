@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= t("clients.title") %></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th><%= t("clients.name") %></th>
+      <th><%= t("clients.description") %></th>
+      <th><%= t("clients.discount") %></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @clients.each do |client| %>
+      <tr>
+        <td><%= client.name %></td>
+        <td><%= client.description %></td>
+        <td><%= client.discount %></td>
+        <td><%= link_to t("clients.show"), client %></td>
+        <td><%= link_to t("clients.edit"), edit_client_path(client) %></td>
+        <td><%= link_to t("clients.destroy"), client, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to t("clients.new"), new_client_path %>
+
+<%= link_to t("admins.back"), admins_path %>

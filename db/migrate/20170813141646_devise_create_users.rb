@@ -37,6 +37,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.1]
       t.string :mobile, null: false, unique: true
       t.boolean  :disable, default: false
       t.integer :role, default: 0
+      t.text :image
 
       t.timestamps null: false
     end

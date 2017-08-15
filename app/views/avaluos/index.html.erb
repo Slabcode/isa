@@ -1,0 +1,113 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Avaluos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre solicitante</th>
+      <th>Tipo de identificacion</th>
+      <th>Numero de identificacion</th>
+      <th>Client</th>
+      <th>Objeto avaluo</th>
+      <th>Fecha avaluo</th>
+      <th>Fecha correcion</th>
+      <th>Metodologia valutoria</th>
+      <th>Estado avaluo</th>
+      <th>Estado revison</th>
+      <th>Barrio</th>
+      <th>Nombre conjunto o edificio</th>
+      <th>Departamento</th>
+      <th>Ciudad</th>
+      <th>Sistemas de coordenadas</th>
+      <th>Latitud</th>
+      <th>Longitud</th>
+      <th>Sistemas de coordenadas otra</th>
+      <th>Direccion inmueble</th>
+      <th>Justificacion metodologia</th>
+      <th>Avaluo type</th>
+      <th>Inmueble tipo</th>
+      <th>Inmueble uso</th>
+      <th>Inmueble uso otro</th>
+      <th>Inmueble clase</th>
+      <th>Inmueble clase otro</th>
+      <th>Inmueble tipo vivienda</th>
+      <th>M inmob principal 1</th>
+      <th>M inmob principal 2</th>
+      <th>M inmob gj 1</th>
+      <th>M inmob gj 2</th>
+      <th>M inmob gj 3</th>
+      <th>M inmob gj 4</th>
+      <th>M inmob gj 5</th>
+      <th>M inmob dp 1</th>
+      <th>M inmobiliaria dp 2</th>
+      <th>Chip</th>
+      <th>Inmueble ubicacion</th>
+      <th>Inmueble num escritura</th>
+      <th>Inmueble num notaria</th>
+      <th>Inmueble fecha escritura</th>
+      <th>Inmueble depto</th>
+      <th>Inmueble ciudad</th>
+      <th>Observaciones observaciones</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @avaluos.each do |avaluo| %>
+      <tr>
+        <td><%= avaluo.nombre_solicitante %></td>
+        <td><%= avaluo.tipo_de_identificacion %></td>
+        <td><%= avaluo.numero_de_identificacion %></td>
+        <td><%= avaluo.client %></td>
+        <td><%= avaluo.objeto_avaluo %></td>
+        <td><%= avaluo.fecha_avaluo %></td>
+        <td><%= avaluo.fecha_correcion %></td>
+        <td><%= avaluo.metodologia_valutoria %></td>
+        <td><%= avaluo.estado_avaluo %></td>
+        <td><%= avaluo.estado_revison %></td>
+        <td><%= avaluo.barrio %></td>
+        <td><%= avaluo.nombre_conjunto_o_edificio %></td>
+        <td><%= avaluo.departamento %></td>
+        <td><%= avaluo.ciudad %></td>
+        <td><%= avaluo.sistemas_de_coordenadas %></td>
+        <td><%= avaluo.latitud %></td>
+        <td><%= avaluo.longitud %></td>
+        <td><%= avaluo.sistemas_de_coordenadas_otra %></td>
+        <td><%= avaluo.direccion_inmueble %></td>
+        <td><%= avaluo.justificacion_metodologia %></td>
+        <td><%= avaluo.avaluo_type %></td>
+        <td><%= avaluo.inmueble_tipo %></td>
+        <td><%= avaluo.inmueble_uso %></td>
+        <td><%= avaluo.inmueble_uso_otro %></td>
+        <td><%= avaluo.inmueble_clase %></td>
+        <td><%= avaluo.inmueble_clase_otro %></td>
+        <td><%= avaluo.inmueble_tipo_vivienda %></td>
+        <td><%= avaluo.m_inmob_principal_1 %></td>
+        <td><%= avaluo.m_inmob_principal_2 %></td>
+        <td><%= avaluo.m_inmob_gj_1 %></td>
+        <td><%= avaluo.m_inmob_gj_2 %></td>
+        <td><%= avaluo.m_inmob_gj_3 %></td>
+        <td><%= avaluo.m_inmob_gj_4 %></td>
+        <td><%= avaluo.m_inmob_gj_5 %></td>
+        <td><%= avaluo.m_inmob_dp_1 %></td>
+        <td><%= avaluo.m_inmobiliaria_dp_2 %></td>
+        <td><%= avaluo.chip %></td>
+        <td><%= avaluo.inmueble_ubicacion %></td>
+        <td><%= avaluo.inmueble_num_escritura %></td>
+        <td><%= avaluo.inmueble_num_notaria %></td>
+        <td><%= avaluo.inmueble_fecha_escritura %></td>
+        <td><%= avaluo.inmueble_depto %></td>
+        <td><%= avaluo.inmueble_ciudad %></td>
+        <td><%= avaluo.observaciones_observaciones %></td>
+        <td><%= link_to 'Show', avaluo %></td>
+        <td><%= link_to 'Edit', edit_avaluo_path(avaluo) %></td>
+        <td><%= link_to 'Destroy', avaluo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Avaluo', new_avaluo_path %>

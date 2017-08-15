@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong><%= t("clients.name") %>:</strong>
+  <%= @client.name %>
+</p>
+
+<p>
+  <strong><%= t("clients.description") %>:</strong>
+  <%= @client.description %>
+</p>
+
+<p>
+  <strong><%= t("clients.discount") %>:</strong>
+  <%= @client.discount %>
+</p>
+
+<%= link_to t("clients.edit"), edit_client_path(@client) %> |
+<%= link_to t("admins.back"), clients_path %>

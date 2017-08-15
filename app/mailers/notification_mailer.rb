@@ -11,4 +11,9 @@ class NotificationMailer < ApplicationMailer
     @pass = pass
     mail(to: email, subject: "Creacion de administrador",reply_to: "contact@isainmobilaria.com")
   end
+
+  def notification_avaluo(email,id)
+    @id = id
+    mail(to: email, subject: "Asignacion de avaluos",reply_to: "contact@isainmobilaria.com")
+  end
 end
