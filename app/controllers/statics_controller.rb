@@ -91,6 +91,34 @@ class StaticsController < ApplicationController
           @results["#{params[:avaluo_type]}-revision-revisado"] = t2
         end
       end
+    else
+      @type = "bar_chart"
+      @results = []
+      data = {}
+      if params[:avaluo_type] == "Todos"
+        ["Inmuble-Rural-Casa rural","Inmueble-Rural-Lote","Inmueble-Urbano-Apartamento",
+        "Inmueble-Urbano-Bodega","Inmueble-Urbano-Casa","Inmueble-Urbano-Local","Inmueble-Urbano-Lote urbano",
+        "Inmueble-Urbano-Lote Oficina"].each do |k|
+          values = []
+          data = {}
+          Client.all.each  do |m|
+            values << [m.name,Avaluo.where(client_id: m.id).where(avaluo_type: Avaluo.avaluo_types[k]).count]
+          end
+          data[:name] = k
+          data[:data] = values
+          @results << data
+        end
+      else
+        values = []
+        Client.all.each do |m|
+          values << [m.name,Avaluo.where(client_id: m.id).where(avaluo_type: Avaluo.avaluo_types[params[:avaluo_type]]).count]
+        end
+        data[:name] = params[:avaluo_type]
+        data[:data] = values
+        @results << data
+      end
+      p @results
+
     end
   end
 

@@ -1,0 +1,13 @@
+<%= bar_chart @results,id: "chart", adapter: "highcharts", library: {
+  title: {
+        text: 'Avaluos por clientes'
+    },
+    legend: {
+        reversed: true
+    },
+    plotOptions: {
+        series: {
+            stacking: 'normal'
+        }
+    }
+  } %>
