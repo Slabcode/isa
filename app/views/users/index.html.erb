@@ -5,23 +5,47 @@
 		<%= image_tag "logo_isa.png", :class => "logo img-responsive" %>
 	</div>
 	<h2 class="title"><%= t("users.title")%> </h2>
-	<%= link_to t("users.new"), new_user_registration_path %>
 	
-	<section class="show_users">
-		<% @users.each do |u| %>
-		<p>
-			<%= u.name %> - <%= u.lastname %> - <%= u.username %> - <%= u.role %>
-		</p>
-		<p>
-			<%= link_to t("users.show"), u %>
-			<% if current_admin %>
-			<%= link_to t("users.destroy"), u, method: :delete, data: { confirm: 'Are you sure?'}  %>
-			<% end %>
-		</p>
+	<div class="content_info">
+		<section class="data row">
+			<div class="user_data col-md-2">Nombre</div>
+			<div class="user_data col-md-2">Apellido</div>
+			<div class="user_data col-md-2">Usuario</div>
+			<div class="user_data col-md-2">Rol</div>
+			<div class="user_data col-md-2">Mostrar Usuario</div>
+			<div class="user_data col-md-2">Borrar Usuario</div>
+		</section>
+		<section class="show_users row">
+			<% @users.each do |u| %>
+			<div class="user_name col-md-2">
+				<p class="info"><%= u.name %></p>
+			</div>
+			<div class="user_lastname col-md-2">
+				<p class="info"><%= u.lastname %></p>
+			</div>
+			<div class="user_username col-md-2">
+				<p class="info"><%= u.username %></p>
+			</div>
+			<div class="user_role col-md-2">
+				<p class="info"><%= u.role %></p>
+			</div>
+			<div class="show_user col-md-2">
+				<p class="link"><%= link_to icon('user-circle'), u %></p>
+			</div>
+			<div class="remove_user col-md-2">
+				<% if current_admin %>
+				<p class="link"><%= link_to icon('user-times'), u, method: :delete, data: { confirm: 'Are you sure?'}  %></p>
+				<% end %>
+			</div>
 
-		<% end %>	
-	</section>
+			<% end %>	
+		</section>
 
+		<%= link_to  new_user_registration_path, :class => "create_user" do %>
+			<%= icon('user-plus') + " " + t("users.new") %>
+		<% end%>
+	</div>
+	
 	<%= render 'paginate' %>	
 </section>
 
