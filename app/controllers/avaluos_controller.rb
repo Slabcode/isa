@@ -41,43 +41,54 @@ class AvaluosController < ApplicationController
   # PATCH/PUT /avaluos/1.json
   def update
     respond_to do |format|
-      if @avaluo.update(avaluo_params)
-        if(params.has_key?(:images))
-          params[:images].each do |i|
-            img = AvaluoImage.new
-            img.image = i
-            img.avaluo_id = @avaluo.id
-            img.save
-          end
-        end
-        if current_user.Perito?
-          if params.has_key?(:finalizado)
-            @avaluo.estado_avaluo = 2
-             @avaluo.estado_revison = 0
-            revisor = User.where(role: 1).first
-            a = AvaluoUser.new
-            a.avaluo_id = @avaluo.id
-            a.user_id = revisor.id
-            a.save
-          else
-            @avaluo.estado_avaluo = 1
-          end
+      if current_admin
+        if @avaluo.update(avaluo_params)
+          format.html { redirect_to @avaluo, notice: 'Avaluo was successfully updated.' }
+          format.json { render :show, status: :ok, location: @avaluo }
         else
-          if params.has_key?(:finalizado_re)
-            @avaluo.estado_avaluo = 3
-            @avaluo.estado_revison = 2
-          else
-            @avaluo.estado_avaluo = 2
-            @avaluo.estado_revison = 1
-          end
+          format.html { render :edit }
+          format.json { render json: @avaluo.errors, status: :unprocessable_entity }
         end
-        @avaluo.save
-        format.html { redirect_to @avaluo, notice: 'Avaluo was successfully updated.' }
-        format.json { render :show, status: :ok, location: @avaluo }
       else
-        format.html { render :edit }
-        format.json { render json: @avaluo.errors, status: :unprocessable_entity }
+        if @avaluo.update(avaluo_params)
+          if(params.has_key?(:images))
+            params[:images].each do |i|
+              img = AvaluoImage.new
+              img.image = i
+              img.avaluo_id = @avaluo.id
+              img.save
+            end
+          end
+          if current_user.Perito?
+            if params.has_key?(:finalizado)
+              @avaluo.estado_avaluo = 2
+               @avaluo.estado_revison = 0
+              revisor = User.where(role: 1).first
+              a = AvaluoUser.new
+              a.avaluo_id = @avaluo.id
+              a.user_id = revisor.id
+              a.save
+            else
+              @avaluo.estado_avaluo = 1
+            end
+          else
+            if params.has_key?(:finalizado_re)
+              @avaluo.estado_avaluo = 3
+              @avaluo.estado_revison = 2
+            else
+              @avaluo.estado_avaluo = 2
+              @avaluo.estado_revison = 1
+            end
+          end
+          @avaluo.save
+          format.html { redirect_to @avaluo, notice: 'Avaluo was successfully updated.' }
+          format.json { render :show, status: :ok, location: @avaluo }
+        else
+          format.html { render :edit }
+          format.json { render json: @avaluo.errors, status: :unprocessable_entity }
+        end
       end
+
     end
   end
 

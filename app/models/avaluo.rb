@@ -4,11 +4,41 @@ class Avaluo < ApplicationRecord
   has_many :avaluo_users
   has_many :users, through: :avaluo_users
 
-  enum estado_avaluo: {
-    "nuevo" => 0,
-    "en progreso" => 1,
-    "en revison" => 2,
-    "finalizado" => 3,
+  enum tipo_de_identificacion: {
+    "C.C" => 0,
+    "C.Ext" => 1,
+    "Nit" => 2,
+  }
+
+  enum objeto_avaluo: {
+    "organizacion": 0,
+    "actualizacion":1,
+    "reconsideracion":2,
+    "correccion":3,
+    "remate":4,
+    "dacion en pago":5,
+    "desafectacion":6,
+    "normalizacion":7
+  }
+  enum metodologia_valutoria: {
+    "comparacion de mercado":0,
+    "capitalizacion de ingresos":1,
+    "metodo de reposicion":2,
+    "metodo residual":3,
+    "comparacion-capitalizacion":4,
+    "comparacion-reposicion":5,
+    "comparacion-residual":6,
+    "capitalizacion-reposicion":7,
+    "capitalizacion-residual":8,
+    "reposicion-residual":9,
+    "comp-capit-repos":10,
+    "comp-repos-residual":11,
+    "comp-capit-residual":12,
+    "comp-capit-repos-residual"
+  }
+
+  enum tipo_de_identificacion: {
+
   }
 
   enum estado_revison: {
@@ -28,6 +58,6 @@ class Avaluo < ApplicationRecord
     "Inmueble-Urbano-Lote Oficina" => 7,
   }
 
-  
+
 
 end

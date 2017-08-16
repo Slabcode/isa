@@ -213,7 +213,7 @@
     <%= form.label :observaciones_observaciones %>
     <%= form.text_area :observaciones_observaciones, id: :avaluo_observaciones_observaciones %>
   </div>
-  <% if current_user.Perito? %>
+  <% if current_user && current_user.Perito? %>
     <div class="field">
       <label for="">Finalizado</label>
       <%=   check_box_tag 'finalizado' %>
@@ -222,7 +222,7 @@
     <label for="">Imagenes</label>
     <input type="file" name="images[]" id="photos" multiple />
 
-  <% else %>
+  <% elsif current_user %>
     <div class="field">
       <label for="">Revison finalizado</label>
       <%=   check_box_tag 'finalizado_re' %>
