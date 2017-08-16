@@ -1,236 +1,237 @@
 <%= form_with(model: avaluo,local: true, multipart: true) do |form| %>
-  <% if avaluo.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(avaluo.errors.count, "error") %> prohibited this avaluo from being saved:</h2>
+<% if avaluo.errors.any? %>
+<div id="error_explanation">
+	<h2><%= pluralize(avaluo.errors.count, "error") %> prohibited this avaluo from being saved:</h2>
 
-      <ul>
-      <% avaluo.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :nombre_solicitante %>
-    <%= form.text_field :nombre_solicitante, id: :avaluo_nombre_solicitante %>
-  </div>
-
-  <div class="field">
-    <%= form.label :tipo_de_identificacion %>
-    <%= form.number_field :tipo_de_identificacion, id: :avaluo_tipo_de_identificacion %>
-  </div>
-
-  <div class="field">
-    <%= form.label :numero_de_identificacion %>
-    <%= form.text_field :numero_de_identificacion, id: :avaluo_numero_de_identificacion %>
-  </div>
-
-  <div class="field">
-    <%= form.label :objeto_avaluo %>
-    <%= form.number_field :objeto_avaluo, id: :avaluo_objeto_avaluo %>
-  </div>
-
-  <div class="field">
-    <%= form.label :fecha_avaluo %>
-    <%= form.date_select :fecha_avaluo, id: :avaluo_fecha_avaluo %>
-  </div>
-
-  <div class="field">
-    <%= form.label :fecha_correcion %>
-    <%= form.date_select :fecha_correcion, id: :avaluo_fecha_correcion %>
-  </div>
-
-  <div class="field">
-    <%= form.label :metodologia_valutoria %>
-    <%= form.number_field :metodologia_valutoria, id: :avaluo_metodologia_valutoria %>
-  </div>
+	<ul>
+		<% avaluo.errors.full_messages.each do |message| %>
+		<li><%= message %></li>
+		<% end %>
+	</ul>
+</div>
+<% end %>
 
 
+<section class="basic_info">
+	<h4 class="name_section">Información Básica</h4>
+	<div class="form_info">
+		<div class="form-group row">
+			<div class="field col-md-4">
+				<%= form.label :nombre_solicitante %>
+				<%= form.text_field :nombre_solicitante, id: :avaluo_nombre_solicitante %>
+			</div>
+			<div class="field col-md-4">
+				<%= form.label :tipo_de_identificacion %>
+				<%= form.number_field :tipo_de_identificacion, id: :avaluo_tipo_de_identificacion %>
+			</div>
+			<div class="field col-md-4">
+				<%= form.label :numero_de_identificacion %>
+				<%= form.text_field :numero_de_identificacion, id: :avaluo_numero_de_identificacion %>
+			</div>
+		</div>
+		<div class="form-group row">
+			<div class="field col-md-4">
+				<%= form.label :objeto_avaluo %>
+				<%= form.number_field :objeto_avaluo, id: :avaluo_objeto_avaluo %>
+			</div>
+		</div>
+		<div class="form-group row">
+			<div class="field col-md-4">
+				<%= form.label :fecha_avaluo %>
+				<%= form.date_select :fecha_avaluo, id: :avaluo_fecha_avaluo %>
+			</div>
+			<div class="field col-md-4">
+				<%= form.label :fecha_correcion %>
+				<%= form.date_select :fecha_correcion, id: :avaluo_fecha_correcion %>
+			</div>
+			<div class="field col-md-4">
+				<%= form.label :metodologia_valutoria %>
+				<%= form.number_field :metodologia_valutoria, id: :avaluo_metodologia_valutoria %>
+			</div>
+		</div>
+		<div class="form-group row">
+			<div class="field col-md-4">
+				<%= form.label :barrio %>
+				<%= form.text_field :barrio, id: :avaluo_barrio %>
+			</div>
+			<div class="field col-md-4">
+				<%= form.label :nombre_conjunto_o_edificio %>
+				<%= form.text_field :nombre_conjunto_o_edificio, id: :avaluo_nombre_conjunto_o_edificio %>
+			</div>
+		</div>
+		<div class="form-group row">
+			<div class="field col-md-4">
+				<%= form.label :departamento %>
+				<%= form.text_field :departamento, id: :avaluo_departamento %>
+			</div>
+			<div class="field col-md-4">
+				<%= form.label :ciudad %>
+				<%= form.text_field :ciudad, id: :avaluo_ciudad %>
+			</div>
+		</div>
+		<div class="form-group row">
+			<div class="field col-md-4">
+				<%= form.label :sistemas_de_coordenadas %>
+				<%= form.number_field :sistemas_de_coordenadas, id: :avaluo_sistemas_de_coordenadas %>
+				<div class="field">
+					<%= form.label :sistemas_de_coordenadas_otra %>
+					<%= form.text_field :sistemas_de_coordenadas_otra, id: :avaluo_sistemas_de_coordenadas_otra %>
+				</div>
+			</div>
+			<div class="field col-md-4">
+				<%= form.label :latitud %>
+				<%= form.text_field :latitud, id: :avaluo_latitud %>
+			</div>
+			<div class="field col-md-4">
+				<%= form.label :longitud %>
+				<%= form.text_field :longitud, id: :avaluo_longitud %>
+			</div>
+		</div>
+		<div class="form-group row">
+			<div class="field col-md-12">
+				<%= form.label :direccion_inmueble %>
+				<%= form.text_field :direccion_inmueble, id: :avaluo_direccion_inmueble %>
+			</div>
+		</div>
+		<div class="form-group row">
+			<div class="field col-md-9">
+				<%= form.label :justificacion_metodologia %>
+				<%= form.text_area :justificacion_metodologia, id: :avaluo_justificacion_metodologia %>
+			</div>
+		</div>
+	</div>
+</section>
 
-  <div class="field">
-    <%= form.label :barrio %>
-    <%= form.text_field :barrio, id: :avaluo_barrio %>
-  </div>
+<section class="property_info">
+	<h4 class="name_section">Información del Inmueble</h4>
+	<div class="form_info">
+		<div class="form-group five clearfix">
+			<div class="field">
+				<%= form.label :inmueble_tipo %>
+				<%= form.text_field :inmueble_tipo, id: :avaluo_inmueble_tipo %>
+			</div>
+			<div class="field">
+				<%= form.label :inmueble_uso %>
+				<%= form.number_field :inmueble_uso, id: :avaluo_inmueble_uso %>
+			</div>
+			<div class="field">
+				<%= form.label :inmueble_uso_otro %>
+				<%= form.text_field :inmueble_uso_otro, id: :avaluo_inmueble_uso_otro %>
+			</div>
+			<div class="field">
+				<%= form.label :inmueble_clase %>
+				<%= form.number_field :inmueble_clase, id: :avaluo_inmueble_clase %>
+			</div>
+			<div class="field">
+				<%= form.label :inmueble_clase_otro %>
+				<%= form.text_field :inmueble_clase_otro, id: :avaluo_inmueble_clase_otro %>
+			</div>
+		</div>
+		<div class="form-group row">
+			<div class="field col-md-4">
+				<%= form.label :m_inmob_principal_1 %>
+				<%= form.text_field :m_inmob_principal_1, id: :avaluo_m_inmob_principal_1 %>
+			</div>
+			<div class="field col-md-4">
+				<%= form.label :m_inmob_principal_2 %>
+				<%= form.text_field :m_inmob_principal_2, id: :avaluo_m_inmob_principal_2 %>
+			</div>
+			<div class="field col-md-4">
+				<%= form.label :m_inmob_gj_1 %>
+				<%= form.text_field :m_inmob_gj_1, id: :avaluo_m_inmob_gj_1 %>
+			</div>
+		</div>
+		<div class="form-group row">
+			<div class="field col-md-3">
+				<%= form.label :m_inmob_gj_2 %>
+				<%= form.text_field :m_inmob_gj_2, id: :avaluo_m_inmob_gj_2 %>
+			</div>
+			<div class="field col-md-3">
+				<%= form.label :m_inmob_gj_3 %>
+				<%= form.text_field :m_inmob_gj_3, id: :avaluo_m_inmob_gj_3 %>
+			</div>
+			<div class="field col-md-3">
+				<%= form.label :m_inmob_gj_4 %>
+				<%= form.text_field :m_inmob_gj_4, id: :avaluo_m_inmob_gj_4 %>
+			</div>
+			<div class="field col-md-3">
+				<%= form.label :m_inmob_gj_5 %>
+				<%= form.text_field :m_inmob_gj_5, id: :avaluo_m_inmob_gj_5 %>
+			</div>
+		</div>
+		<div class="form-group row">
+			<div class="field col-md-4">
+				<%= form.label :m_inmob_dp_1 %>
+				<%= form.text_field :m_inmob_dp_1, id: :avaluo_m_inmob_dp_1 %>
+			</div>
+			<div class="field col-md-4">
+				<%= form.label :m_inmobiliaria_dp_2 %>
+				<%= form.text_field :m_inmobiliaria_dp_2, id: :avaluo_m_inmobiliaria_dp_2 %>
+			</div>
+			<div class="field col-md-4">
+				<%= form.label :chip %>
+				<%= form.text_field :chip, id: :avaluo_chip %>
+			</div>
+		</div>
+		<div class="form-group five clearfix">
+			<div class="field">
+				<%= form.label :inmueble_num_escritura %>
+				<%= form.text_field :inmueble_num_escritura, id: :avaluo_inmueble_num_escritura %>
+			</div>
+			<div class="field">
+				<%= form.label :inmueble_num_notaria %>
+				<%= form.text_field :inmueble_num_notaria, id: :avaluo_inmueble_num_notaria %>
+			</div>
+			<div class="field">
+				<%= form.label :inmueble_fecha_escritura %>
+				<%= form.date_select :inmueble_fecha_escritura, id: :avaluo_inmueble_fecha_escritura %>
+			</div>
+			<div class="field">
+				<%= form.label :inmueble_depto %>
+				<%= form.text_field :inmueble_depto, id: :avaluo_inmueble_depto %>
+			</div>
+			<div class="field">
+				<%= form.label :inmueble_ciudad %>
+				<%= form.text_field :inmueble_ciudad, id: :avaluo_inmueble_ciudad %>
+			</div>
+		</div>
+		<div class="form-group row">
+			<div class="field">
+				<%= form.label :inmueble_ubicacion %>
+				<%= form.number_field :inmueble_ubicacion, id: :avaluo_inmueble_ubicacion %>
+			</div>
+		</div>
+	</div>
+</section>
 
-  <div class="field">
-    <%= form.label :nombre_conjunto_o_edificio %>
-    <%= form.text_field :nombre_conjunto_o_edificio, id: :avaluo_nombre_conjunto_o_edificio %>
-  </div>
+<section class="obs_info">
+	<h4 class="name_section">Observaciones</h4>
+	<div class="form_info">
+		<div class="field">
+			<%= form.label :observaciones_observaciones %>
+			<%= form.text_area :observaciones_observaciones, id: :avaluo_observaciones_observaciones %>
+		</div>
+	</div>
+</section>
 
-  <div class="field">
-    <%= form.label :departamento %>
-    <%= form.text_field :departamento, id: :avaluo_departamento %>
-  </div>
+<% if current_user.Perito? %>
+<div class="field">
+	<label for="">Finalizado</label>
+	<%=   check_box_tag 'finalizado' %>
+</div>
+<br>
+<label for="">Imagenes</label>
+<input type="file" name="images[]" id="photos" multiple />
 
-  <div class="field">
-    <%= form.label :ciudad %>
-    <%= form.text_field :ciudad, id: :avaluo_ciudad %>
-  </div>
-
-  <div class="field">
-    <%= form.label :sistemas_de_coordenadas %>
-    <%= form.number_field :sistemas_de_coordenadas, id: :avaluo_sistemas_de_coordenadas %>
-  </div>
-
-  <div class="field">
-    <%= form.label :latitud %>
-    <%= form.text_field :latitud, id: :avaluo_latitud %>
-  </div>
-
-  <div class="field">
-    <%= form.label :longitud %>
-    <%= form.text_field :longitud, id: :avaluo_longitud %>
-  </div>
-
-  <div class="field">
-    <%= form.label :sistemas_de_coordenadas_otra %>
-    <%= form.text_field :sistemas_de_coordenadas_otra, id: :avaluo_sistemas_de_coordenadas_otra %>
-  </div>
-
-  <div class="field">
-    <%= form.label :direccion_inmueble %>
-    <%= form.text_field :direccion_inmueble, id: :avaluo_direccion_inmueble %>
-  </div>
-
-  <div class="field">
-    <%= form.label :justificacion_metodologia %>
-    <%= form.text_area :justificacion_metodologia, id: :avaluo_justificacion_metodologia %>
-  </div>
-
-
-  <div class="field">
-    <%= form.label :inmueble_tipo %>
-    <%= form.text_field :inmueble_tipo, id: :avaluo_inmueble_tipo %>
-  </div>
-
-  <div class="field">
-    <%= form.label :inmueble_uso %>
-    <%= form.number_field :inmueble_uso, id: :avaluo_inmueble_uso %>
-  </div>
-
-  <div class="field">
-    <%= form.label :inmueble_uso_otro %>
-    <%= form.text_field :inmueble_uso_otro, id: :avaluo_inmueble_uso_otro %>
-  </div>
-
-  <div class="field">
-    <%= form.label :inmueble_clase %>
-    <%= form.number_field :inmueble_clase, id: :avaluo_inmueble_clase %>
-  </div>
-
-  <div class="field">
-    <%= form.label :inmueble_clase_otro %>
-    <%= form.text_field :inmueble_clase_otro, id: :avaluo_inmueble_clase_otro %>
-  </div>
-
-  <div class="field">
-    <%= form.label :inmueble_tipo_vivienda %>
-    <%= form.number_field :inmueble_tipo_vivienda, id: :avaluo_inmueble_tipo_vivienda %>
-  </div>
-
-  <div class="field">
-    <%= form.label :m_inmob_principal_1 %>
-    <%= form.text_field :m_inmob_principal_1, id: :avaluo_m_inmob_principal_1 %>
-  </div>
-
-  <div class="field">
-    <%= form.label :m_inmob_principal_2 %>
-    <%= form.text_field :m_inmob_principal_2, id: :avaluo_m_inmob_principal_2 %>
-  </div>
-
-  <div class="field">
-    <%= form.label :m_inmob_gj_1 %>
-    <%= form.text_field :m_inmob_gj_1, id: :avaluo_m_inmob_gj_1 %>
-  </div>
-
-  <div class="field">
-    <%= form.label :m_inmob_gj_2 %>
-    <%= form.text_field :m_inmob_gj_2, id: :avaluo_m_inmob_gj_2 %>
-  </div>
-
-  <div class="field">
-    <%= form.label :m_inmob_gj_3 %>
-    <%= form.text_field :m_inmob_gj_3, id: :avaluo_m_inmob_gj_3 %>
-  </div>
-
-  <div class="field">
-    <%= form.label :m_inmob_gj_4 %>
-    <%= form.text_field :m_inmob_gj_4, id: :avaluo_m_inmob_gj_4 %>
-  </div>
-
-  <div class="field">
-    <%= form.label :m_inmob_gj_5 %>
-    <%= form.text_field :m_inmob_gj_5, id: :avaluo_m_inmob_gj_5 %>
-  </div>
-
-  <div class="field">
-    <%= form.label :m_inmob_dp_1 %>
-    <%= form.text_field :m_inmob_dp_1, id: :avaluo_m_inmob_dp_1 %>
-  </div>
-
-  <div class="field">
-    <%= form.label :m_inmobiliaria_dp_2 %>
-    <%= form.text_field :m_inmobiliaria_dp_2, id: :avaluo_m_inmobiliaria_dp_2 %>
-  </div>
-
-  <div class="field">
-    <%= form.label :chip %>
-    <%= form.text_field :chip, id: :avaluo_chip %>
-  </div>
-
-  <div class="field">
-    <%= form.label :inmueble_ubicacion %>
-    <%= form.number_field :inmueble_ubicacion, id: :avaluo_inmueble_ubicacion %>
-  </div>
-
-  <div class="field">
-    <%= form.label :inmueble_num_escritura %>
-    <%= form.text_field :inmueble_num_escritura, id: :avaluo_inmueble_num_escritura %>
-  </div>
-
-  <div class="field">
-    <%= form.label :inmueble_num_notaria %>
-    <%= form.text_field :inmueble_num_notaria, id: :avaluo_inmueble_num_notaria %>
-  </div>
-
-  <div class="field">
-    <%= form.label :inmueble_fecha_escritura %>
-    <%= form.date_select :inmueble_fecha_escritura, id: :avaluo_inmueble_fecha_escritura %>
-  </div>
-
-  <div class="field">
-    <%= form.label :inmueble_depto %>
-    <%= form.text_field :inmueble_depto, id: :avaluo_inmueble_depto %>
-  </div>
-
-  <div class="field">
-    <%= form.label :inmueble_ciudad %>
-    <%= form.text_field :inmueble_ciudad, id: :avaluo_inmueble_ciudad %>
-  </div>
-
-  <div class="field">
-    <%= form.label :observaciones_observaciones %>
-    <%= form.text_area :observaciones_observaciones, id: :avaluo_observaciones_observaciones %>
-  </div>
-  <% if current_user.Perito? %>
-    <div class="field">
-      <label for="">Finalizado</label>
-      <%=   check_box_tag 'finalizado' %>
-    </div>
-    <br>
-    <label for="">Imagenes</label>
-    <input type="file" name="images[]" id="photos" multiple />
-
-  <% else %>
-    <div class="field">
-      <label for="">Revison finalizado</label>
-      <%=   check_box_tag 'finalizado_re' %>
-    </div>
-  <% end %>
+<% else %>
+<div class="field">
+	<label for="">Revison finalizado</label>
+	<%=   check_box_tag 'finalizado_re' %>
+</div>
+<% end %>
 
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+<div class="actions">
+	<%= form.submit %>
+</div>
 <% end %>

@@ -16,6 +16,6 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 Rails.application.config.assets.precompile += %w( statics.css )
 Rails.application.config.assets.precompile += %w( admins.css )
 Rails.application.config.assets.precompile += %w( users.css )
-
+Rails.application.config.assets.precompile += %w( avaluos.css )
 
 Rails.application.config.assets.precompile += %w( bootstrap.min.js )
