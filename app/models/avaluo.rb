@@ -4,6 +4,16 @@ class Avaluo < ApplicationRecord
   has_many :avaluo_users
   has_many :users, through: :avaluo_users
 
+  enum inmueble_clase: {
+    "unifamiliar":0,
+    "bifamiliar":1,
+    "multifamiliar":2,
+    "Viv. subsidiada":3,
+    "industrial":4,
+    "comercial":5,
+    "ed oficinas":6
+  }
+
   enum tipo_de_identificacion: {
     "C.C" => 0,
     "C.Ext" => 1,
@@ -34,11 +44,47 @@ class Avaluo < ApplicationRecord
     "comp-capit-repos":10,
     "comp-repos-residual":11,
     "comp-capit-residual":12,
-    "comp-capit-repos-residual"
+    "comp-capit-repos-residual":13
   }
 
-  enum tipo_de_identificacion: {
+  enum inmueble_uso: {
+    "vivienda":0,
+    "comercio":1,
+    "bodega":2,
+    "oficina":3,
+    "V multihabitacioinal":4,
+    "educacion":5,
+    "salud":6,
+    "hotelero":7,
+    "_industrial":8,
+    "iglesia":9,
+    "parqueadero":10,
+    "auditorio":11,
+    "instalacion deportiva":12
+  }
 
+  enum estado_avaluo: {
+    "nuevo" => 0,
+    "en progreso" => 1,
+    "en revison" => 2,
+    "finalizado" => 3,
+  }
+
+
+  enum inmueble_tipo_vivienda: {
+    "vis":0,
+    "no vis":1
+  }
+
+  enum inmueble_ubicacion: {
+    "esquinero":0,
+    "medianero":1
+  }
+
+  enum sistemas_de_coordenadas: {
+    "magna sirgas": 0,
+    "wgs82":1,
+    "wgs84":2
   }
 
   enum estado_revison: {

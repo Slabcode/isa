@@ -1,3 +1,57 @@
-// Place all the styles related to the Avaluos controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "fonts";
+@import "mixin";
+@import "variables";
+
+.main{
+	padding: 30px 0;
+	position: relative;
+	text-align: center;
+	.logo{
+		display: inline-block;
+		position: relative;
+		width: 140px;
+	}
+	.title{
+		color: #333;
+		font-family: $font-LatoB;
+		text-align: center;
+	}
+	.avaluos_form{
+		padding: 0 40px 20px;
+		form{
+			position: relative;
+			text-align: left;
+			.basic_info, .property_info, .obs_info{
+				margin-bottom: 30px;
+				padding: 0 25px;
+				position: relative;
+				.name_section{
+					background-color: #3A576A;
+					border-top-left-radius: 20px;
+					border-top-right-radius: 20px;
+					color: #fff;
+					display: inline-block;
+					font-family: $font-LatoS;
+					font-size: 16px;
+					margin: 0;
+					padding: 15px 35px 12px; 
+					text-transform: uppercase;
+				}
+				.form_info{
+					background-color: #d1d1d1;
+					border-bottom-left-radius: 5px;
+					border-bottom-right-radius: 5px;
+					border-top-right-radius: 5px;
+					padding: 25px 35px;
+					.five{
+						.field{
+							display: inline-block;
+							float: left;
+							width: 20%;
+						}
+					}
+				}
+			}
+		}
+	}
+}

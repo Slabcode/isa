@@ -1,6 +1,13 @@
-<h1>Editing Avaluo</h1>
-
-<%= render 'form', avaluo: @avaluo %>
+<%= stylesheet_link_tag 'avaluos', media: 'all', type:"text/css" %>
+<section class="main">
+	<div class="logo">
+		<%= image_tag "logo_isa.png", :class => "logo img-responsive" %>
+	</div>
+	<h2 class="title">Editing Avaluo</h2>
+	<section class="avaluos_form">
+		<%= render 'form', avaluo: @avaluo %>
+	</section>
+</section>
 
 <%= link_to 'Show', @avaluo %> |
 <%= link_to 'Back', requests_path %>

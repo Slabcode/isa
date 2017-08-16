@@ -65,7 +65,7 @@ class ReportPdf < Prawn::Document
         font("Times-Roman") do
           text_box "<b>Tipo</b>  #{@avaluo.inmueble_tipo} ", :at => [0,cursor], :width => 100, height: 10, :size => 6, :inline_format => true
           text_box "<b>Tipo Vivienda</b>  #{@avaluo.inmueble_tipo_vivienda} ", :at => [(bounds.width - 100)/3,cursor], :width => 100, height: 10, :size => 6, :inline_format => true
-          text_box "<b>Tipo Vivienda</b>  #{@avaluo.inmueble_ubicacion} ", :at => [(bounds.width - 100)/1.5,cursor], :width => 100, height: 10, :size => 6, :inline_format => true
+          text_box "<b>Ubicacion</b>  #{@avaluo.inmueble_ubicacion} ", :at => [(bounds.width - 100)/1.5,cursor], :width => 100, height: 10, :size => 6, :inline_format => true
           text_box "<b>Chip</b>  #{@avaluo.chip} ", :at => [(bounds.width - 100),cursor], :width => 100, height: 10, :size => 6, :inline_format => true
           text_box "<b>Uso</b>  #{@avaluo.inmueble_uso} ", :at => [0,cursor - 8], :width => 100, height: 10, :size => 6, :inline_format => true
           text_box "<b>Clae</b>  #{@avaluo.inmueble_clase} ", :at => [(bounds.width - 100)/1.5,cursor - 8], :width => 100, height: 10, :size => 6, :inline_format => true
