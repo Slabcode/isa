@@ -1,24 +1,48 @@
-<h1>Aqui se van a mostrar las peticiones del usario, igulamente puede ser consultadas por el usuario</h1>
+<%= stylesheet_link_tag 'statics', media: 'all', type:"text/css" %>
 
-<h1>current_user.role</h1>
-<%= link_to t("admins.log_out"), destroy_user_session_path , method: :delete %>
+<section class="valuations">
+	<div class="logo">
+		<%= image_tag "logo_isa.png", :class => "logo img-responsive" %>
+	</div>
+	<%= link_to t("admins.log_out"), destroy_user_session_path , method: :delete , :class => "logout" %>
+	<h2 class="title">Avaluos</h2>
+	<div class="content_info">
+		<section class="data row">
+			<div class="valuation_data col-md-2">Cliente</div>
+			<div class="valuation_data col-md-2">Tipo de Avalúo</div>
+			<div class="valuation_data col-md-2">Estado del Avalúo</div>
+			<div class="valuation_data col-md-2">Tipo de Inmueble</div>
+			<div class="valuation_data col-md-3">Ver Avalúo</div>
+			<div class="valuation_data download col-md-1">Descargar</div>
+		</section>
+		<div class="show_data row">
+			<% @avaluos.each do |a| %>
+			<div class="client col-md-2">
+				<p class="info"><%= a.client.name %></p>
+			</div>
+			<div class="avaluo_type col-md-2">
+				<p class="info"><%= a.avaluo_type %></p>
+			</div>
+			<div class="estado_avaluo col-md-2">
+				<p class="info"><%= a.estado_avaluo %></p>
+			</div>
+			<!--<% if current_user && !current_user.Perito? %>
+			<p class="info"><%= a.estado_revison %></p>
+			<% end %>-->
+			<div class="inmueble_tipo col-md-2">
+				<p class="info"><%= a.inmueble_tipo %></p>
+			</div>
+			<div class="edit_avaluo col-md-3">
+				<p class="info"><%= link_to a.serial, edit_avaluo_path(a) %></p>
+			</div>
+			<div class="pdf col-md-1">
+				<p class="info"><%= link_to "generar pdf", create_pdf_admins_path(format: "pdf",avaluo: a.id) %></p>
+			</div>
+			<!--<%= a.fecha_avaluo %>-->
+
+			<% end %>
+		</div>
+	</div>
+</section>
 
 
-
-<h2>Avaluos</h2>
-<% @avaluos.each do |a| %>
-  <%= a.client.name %>
-  <%= a.avaluo_type %>
-  <%= a.estado_avaluo %>
-
-  <% if current_user && !current_user.Perito? %>
-    <%= a.estado_revison %>
-  <% end %>
-  <%= a.inmueble_tipo %>
-  <%= link_to a.serial, edit_avaluo_path(a) %>
-  <%if current_admin %>
-    <%= link_to "generar pdf", create_pdf_admins_path(format: "pdf",avaluo: a.id) %>
-    <%= a.fecha_avaluo %>
-  <% end %>
-  <br>
-<% end %>

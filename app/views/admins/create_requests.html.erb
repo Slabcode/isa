@@ -1,18 +1,40 @@
-<h1>
-  Asignarle avaluo a un perito
-</h1>
-<%= form_with(url: requests_admins_path, local: true, id: 'avaluo') do |form| %>
-  <%= select_tag(:nivel_one, options_for_select([['Seleccionar categoria nivel 1', 0], ['Inmuebles', 1], ['Muebles', 3]])) %>
-  <br>
-  <%= select_tag(:nivel_two, options_for_select([['Seleccionar categoria nivel 2', 0]])) %>
-  <br>
-  <%= select_tag(:nivel_three, options_for_select([['Seleccionar categoria nivel 3', 0]])) %>
-  <br>
+<%= stylesheet_link_tag 'admins', media: 'all', type:"text/css" %>
 
-  <%= select_tag "peritos", options_from_collection_for_select(@peritos, "id", "email") %>
-  <%= select_tag "clientes", options_from_collection_for_select(@clientes, "id", "name") %>
+<section class="create_request container">
+	<div class="logo">
+		<%= image_tag "logo_isa.png", :class => "logo img-responsive" %>
+	</div>
+	<h2 class="title">Asignar avaluo a un perito</h2>
+	<div class="categories">
+		<%= form_with(url: requests_admins_path, local: true, id: 'avaluo') do |form| %>
+		<div class="form-group row">
+			<div class="option col-md-4">
+				<label>Categoría nivel 1:</label>
+				<%= select_tag(:nivel_one, options_for_select([['Seleccionar categoria nivel 1', 0], ['Inmuebles', 1], ['Muebles', 3]])) %>
+			</div>
+			<div class="option col-md-4">
+				<label>Categoría nivel 2:</label>
+				<%= select_tag(:nivel_two, options_for_select([['Seleccionar categoria nivel 2', 0]])) %>
+			</div>
+			<div class="option col-md-4">
+				<label>Categoría nivel 3:</label>
+				<%= select_tag(:nivel_three, options_for_select([['Seleccionar categoria nivel 3', 0]])) %>
+			</div>
+		</div>
+		<div class="form-group row">
+			<div class="option col-md-4">
+				<label>Seleccione un perito:</label>
+				<%= select_tag "peritos", options_from_collection_for_select(@peritos, "id", "email") %>
+			</div>
+			<div class="option col-md-4">
+				<label>Seleccione el tipo de cliente:</label>
+				<%= select_tag "clientes", options_from_collection_for_select(@clientes, "id", "name") %>
+			</div>
+			<div class="option col-md-4">
+				<button type="submit">Enviar</button>
+			</div>
+		</div>
+		<% end %>
+	</div>
+</section>
 
-  <br>
-  <button type="submit">Enviar</button>
-
-<% end %>

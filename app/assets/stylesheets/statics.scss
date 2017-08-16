@@ -72,3 +72,63 @@ body{
 		}
 	}
 }
+
+.valuations{
+	padding: 40px 0;
+	position: relative;
+	text-align: center;
+	.title{
+		color: #333;
+		font-family: $font-LatoB;
+	}
+	.logo{
+		display: inline-block;
+		position: relative;
+		width: 140px;
+	}
+	.logout{
+		display: inline-block;
+		font-family: $font-Lato;
+		font-size: 15px;
+		padding: 10px 25px;
+		position: absolute;
+		right: 10px;
+		top: 10px;
+	}
+	.content_info{
+		display: inline-block;
+		margin: 0 auto;
+		position: relative;
+		text-align: center;
+		width: 95%;
+		.data{
+			background-color: #d1d1d1;
+			font-family: $font-LatoS;
+			font-size: 17px;
+			margin: 0;
+			.valuation_data{
+				padding: 10px 25px;
+				text-align: center;
+			}
+			.download{
+				padding: 10px;
+			}
+		}
+		.show_data{
+			margin: 0 0 20px;
+			border: 1px solid #d1d1d1;
+			border-top: none;
+			div{
+				.info, .link{
+					display: block;
+					margin: 0;
+					padding: 8px 15px;
+					text-transform: capitalize;
+				}
+			}
+			.pdf{
+				padding: 0;
+			}
+		}
+	}
+}
